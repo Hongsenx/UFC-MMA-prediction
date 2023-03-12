@@ -4,11 +4,9 @@ A multi-part project involving data scraping, data engineering, analysis and mac
 The goal of this project is to generate accurate predictions of fight outcomes for UFC events.
 
 ## Table of contents
-* [Project description](##Project-Description)
-* [Future implementations](##Future-implementations)
-* [Technologies](##Technologies)
-
-
+* [Project description](#Project-Description)
+* [Future implementations](#Future-implementations)
+* [Technologies](#Technologies)
 
 ## Project Description
 ### What the application does (and status)
