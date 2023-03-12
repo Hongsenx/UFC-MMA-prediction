@@ -1,0 +1,42 @@
+
+scrape_basic_info.py
+  -go to page with all fighters and extract their basic info and link to their indepth profile page
+  -returns a JSON file called 'basc_info_uncleaned'
+
+clean_basic_data.py
+  -gets 'basic_info_uncleaned' JSON file and cleans it according to parameters
+  -returns a JSON file called 'basic_info_cleaned'
+
+scrape_indepth_main.py
+  -takes info from JSON file 'basic_info_cleaned' and goes through each link.
+  -uses a function scrape_indepth_part.py called 'indepth_info_dict()' which...
+    -scrapes each fighter's indepth info
+    -returns a dictionary
+  -writes all fighter's dictionary into JSON file called 'indepth_info'
+  -writes all fighter's dictionary with errors into JSON file called 'indepth_error_entries'
+
+-----
+UPDATER ALGORITHM
+
+-get current system date (x)
+-get the name, date of the latest UFC event recorded in SQL (y)
+-on the ufc stats events page, loop through events list and check the dates.
+  -if the event date is before (x) but after (y) get the url and store them in a list.
+-for each element in the list, scrap the event data
+...(more stuff)...
+
+(what if fighter is not in the db?)
+
+-make a backup of the db + backup associated JSON files
+  -update logger saying backup made + json logs
+-update the db + associated JSON files
+  -update logger + json logs
+
+
+
+------
+event scraper (think of how to make list data structure)
+-store the link of each fight in a list
+-for each fight get winner, get loser
+-get all other stats
+

@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"3cad7d7fc7",applicationID:"190390077"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-18220598-10", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<link href="https://www.ufc.com/athletes/all" rel="canonical"/>
+<meta content="The source for fighter bios, records, past fights, video highlights, and more." name="description"/>
+<meta content="ufc, athletes, champions" name="keywords"/>
+<meta content="UFC Fighters, Bios, Event History, Pictures &amp; Video | UFC.com" name="title"/>
+<meta content="Drupal 9 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  // Add a place to store the slot name variable.
+  googletag.slots = googletag.slots || {};
+
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+      '//securepubads.g.doubleclick.net/tag/js/gpt.js';
+
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    gads.src = src;
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+    
+  })();
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+
+        // Start by defining breakpoints for this ad.
+      var mapping = googletag.sizeMapping()
+              .addSize([1024, 768], [250, 250])
+              .addSize([0, 0], [300, 300])
+            .build();
+  
+      googletag.slots["athletes_250"] = googletag.defineSlot("/5458/zuffa.ufc/athletes", [250, 250], "js-dfp-tag-athletes_250")
+  
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+        // Apply size mapping when there are breakpoints.
+    .defineSizeMapping(mapping)
+    ;
+
+  });
+
+</script>
+<script type="text/javascript">
+googletag.cmd.push(function() {
+
+      googletag.pubads().enableAsyncRendering();
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs(true);
+      
+  googletag.enableServices();
+});
+
+</script>
+<link href="/sites/default/files/ufc_logo.png" rel="icon" type="image/png"/>
+<script defer="" src="/sites/default/files/google_tag/primary/google_tag.script.js?rhm6a2"></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_config.icon_color = "transparent,black";</script>
+<title>UFC Fighters, Bios, Event History, Pictures &amp; Video | UFC.com</title>
+<script type="text/javascript">
+      // https://github.com/js-cookie/js-cookie
+      // @todo: need use new version.
+      !function(e){var n=!1;if("function"==typeof define&&define.amd&&(define(e),n=!0),"object"==typeof exports&&(module.exports=e(),n=!0),!n){var o=window.Cookies,t=window.Cookies=e();t.noConflict=function(){return window.Cookies=o,t}}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var o=arguments[e];for(var t in o)n[t]=o[t]}return n}return function n(o){function t(n,r,i){var c;if("undefined"!=typeof document){if(arguments.length>1){if("number"==typeof(i=e({path:"/"},t.defaults,i)).expires){var a=new Date;a.setMilliseconds(a.getMilliseconds()+864e5*i.expires),i.expires=a}i.expires=i.expires?i.expires.toUTCString():"";try{c=JSON.stringify(r),/^[\{\[]/.test(c)&&(r=c)}catch(e){}r=o.write?o.write(r,n):encodeURIComponent(String(r)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=(n=(n=encodeURIComponent(String(n))).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent)).replace(/[\(\)]/g,escape);var s="";for(var f in i)i[f]&&(s+="; "+f,!0!==i[f]&&(s+="="+i[f]));return document.cookie=n+"="+r+s}n||(c={});for(var p=document.cookie?document.cookie.split("; "):[],d=/(%[0-9A-Z]{2})+/g,u=0;u<p.length;u++){var l=p[u].split("="),C=l.slice(1).join("=");this.json||'"'!==C.charAt(0)||(C=C.slice(1,-1));try{var g=l[0].replace(d,decodeURIComponent);if(C=o.read?o.read(C,g):o(C,g)||C.replace(d,decodeURIComponent),this.json)try{C=JSON.parse(C)}catch(e){}if(n===g){c=C;break}n||(c[g]=C)}catch(e){}}return c}}return t.set=t,t.get=function(e){return t.call(t,e)},t.getJSON=function(){return t.apply({json:!0},[].slice.call(arguments))},t.defaults={},t.remove=function(n,o){t(n,"",e(o,{expires:-1}))},t.withConverter=n,t}(function(){})});
+
+      /**
+       * Promise: polyfill https://github.com/taylorhakes/promise-polyfill
+       */
+      !function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):n()}(0,function(){"use strict";function e(e){var n=this.constructor;return this.then(function(t){return n.resolve(e()).then(function(){return t})},function(t){return n.resolve(e()).then(function(){return n.reject(t)})})}function n(){}function t(e){if(!(this instanceof t))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],u(e,this)}function o(e,n){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,t._immediateFn(function(){var t=1===e._state?n.onFulfilled:n.onRejected;if(null!==t){var o;try{o=t(e._value)}catch(f){return void i(n.promise,f)}r(n.promise,o)}else(1===e._state?r:i)(n.promise,e._value)})):e._deferreds.push(n)}function r(e,n){try{if(n===e)throw new TypeError("A promise cannot be resolved with itself.");if(n&&("object"==typeof n||"function"==typeof n)){var o=n.then;if(n instanceof t)return e._state=3,e._value=n,void f(e);if("function"==typeof o)return void u(function(e,n){return function(){e.apply(n,arguments)}}(o,n),e)}e._state=1,e._value=n,f(e)}catch(r){i(e,r)}}function i(e,n){e._state=2,e._value=n,f(e)}function f(e){2===e._state&&0===e._deferreds.length&&t._immediateFn(function(){e._handled||t._unhandledRejectionFn(e._value)});for(var n=0,r=e._deferreds.length;r>n;n++)o(e,e._deferreds[n]);e._deferreds=null}function u(e,n){var t=!1;try{e(function(e){t||(t=!0,r(n,e))},function(e){t||(t=!0,i(n,e))})}catch(o){if(t)return;t=!0,i(n,o)}}var c=setTimeout;t.prototype["catch"]=function(e){return this.then(null,e)},t.prototype.then=function(e,t){var r=new this.constructor(n);return o(this,new function(e,n,t){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof n?n:null,this.promise=t}(e,t,r)),r},t.prototype["finally"]=e,t.all=function(e){return new t(function(n,t){function o(e,f){try{if(f&&("object"==typeof f||"function"==typeof f)){var u=f.then;if("function"==typeof u)return void u.call(f,function(n){o(e,n)},t)}r[e]=f,0==--i&&n(r)}catch(c){t(c)}}if(!e||"undefined"==typeof e.length)throw new TypeError("Promise.all accepts an array");var r=Array.prototype.slice.call(e);if(0===r.length)return n([]);for(var i=r.length,f=0;r.length>f;f++)o(f,r[f])})},t.resolve=function(e){return e&&"object"==typeof e&&e.constructor===t?e:new t(function(n){n(e)})},t.reject=function(e){return new t(function(n,t){t(e)})},t.race=function(e){return new t(function(n,t){for(var o=0,r=e.length;r>o;o++)e[o].then(n,t)})},t._immediateFn="function"==typeof setImmediate&&function(e){setImmediate(e)}||function(e){c(e,0)},t._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};var l=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)return global;throw Error("unable to locate global object")}();"Promise"in l?l.Promise.prototype["finally"]||(l.Promise.prototype["finally"]=e):l.Promise=t});
+
+      /**
+       * Github Fetch Poly
+       * https://github.com/github/fetch
+       *
+       * Minifed of fetch.umd.js at releases section https://github.com/github/fetch/releases
+       */
+      !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e(t.WHATWGFetch={})}(this,function(t){"use strict";var e={searchParams:"URLSearchParams"in self,iterable:"Symbol"in self&&"iterator"in Symbol,blob:"FileReader"in self&&"Blob"in self&&function(){try{return new Blob,!0}catch(t){return!1}}(),formData:"FormData"in self,arrayBuffer:"ArrayBuffer"in self};if(e.arrayBuffer)var r=["[object Int8Array]","[object Uint8Array]","[object Uint8ClampedArray]","[object Int16Array]","[object Uint16Array]","[object Int32Array]","[object Uint32Array]","[object Float32Array]","[object Float64Array]"],o=ArrayBuffer.isView||function(t){return t&&r.indexOf(Object.prototype.toString.call(t))>-1};function n(t){if("string"!=typeof t&&(t=String(t)),/[^a-z0-9\-#$%&'*+.^_`|~]/i.test(t))throw new TypeError("Invalid character in header field name");return t.toLowerCase()}function i(t){return"string"!=typeof t&&(t=String(t)),t}function s(t){var r={next:function(){var e=t.shift();return{done:void 0===e,value:e}}};return e.iterable&&(r[Symbol.iterator]=function(){return r}),r}function a(t){this.map={},t instanceof a?t.forEach(function(t,e){this.append(e,t)},this):Array.isArray(t)?t.forEach(function(t){this.append(t[0],t[1])},this):t&&Object.getOwnPropertyNames(t).forEach(function(e){this.append(e,t[e])},this)}function h(t){if(t.bodyUsed)return Promise.reject(new TypeError("Already read"));t.bodyUsed=!0}function f(t){return new Promise(function(e,r){t.onload=function(){e(t.result)},t.onerror=function(){r(t.error)}})}function u(t){var e=new FileReader,r=f(e);return e.readAsArrayBuffer(t),r}function d(t){if(t.slice)return t.slice(0);var e=new Uint8Array(t.byteLength);return e.set(new Uint8Array(t)),e.buffer}function c(){return this.bodyUsed=!1,this._initBody=function(t){var r;this._bodyInit=t,t?"string"==typeof t?this._bodyText=t:e.blob&&Blob.prototype.isPrototypeOf(t)?this._bodyBlob=t:e.formData&&FormData.prototype.isPrototypeOf(t)?this._bodyFormData=t:e.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)?this._bodyText=t.toString():e.arrayBuffer&&e.blob&&((r=t)&&DataView.prototype.isPrototypeOf(r))?(this._bodyArrayBuffer=d(t.buffer),this._bodyInit=new Blob([this._bodyArrayBuffer])):e.arrayBuffer&&(ArrayBuffer.prototype.isPrototypeOf(t)||o(t))?this._bodyArrayBuffer=d(t):this._bodyText=t=Object.prototype.toString.call(t):this._bodyText="",this.headers.get("content-type")||("string"==typeof t?this.headers.set("content-type","text/plain;charset=UTF-8"):this._bodyBlob&&this._bodyBlob.type?this.headers.set("content-type",this._bodyBlob.type):e.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)&&this.headers.set("content-type","application/x-www-form-urlencoded;charset=UTF-8"))},e.blob&&(this.blob=function(){var t=h(this);if(t)return t;if(this._bodyBlob)return Promise.resolve(this._bodyBlob);if(this._bodyArrayBuffer)return Promise.resolve(new Blob([this._bodyArrayBuffer]));if(this._bodyFormData)throw new Error("could not read FormData body as blob");return Promise.resolve(new Blob([this._bodyText]))},this.arrayBuffer=function(){return this._bodyArrayBuffer?h(this)||Promise.resolve(this._bodyArrayBuffer):this.blob().then(u)}),this.text=function(){var t,e,r,o=h(this);if(o)return o;if(this._bodyBlob)return t=this._bodyBlob,e=new FileReader,r=f(e),e.readAsText(t),r;if(this._bodyArrayBuffer)return Promise.resolve(function(t){for(var e=new Uint8Array(t),r=new Array(e.length),o=0;o<e.length;o++)r[o]=String.fromCharCode(e[o]);return r.join("")}(this._bodyArrayBuffer));if(this._bodyFormData)throw new Error("could not read FormData body as text");return Promise.resolve(this._bodyText)},e.formData&&(this.formData=function(){return this.text().then(p)}),this.json=function(){return this.text().then(JSON.parse)},this}a.prototype.append=function(t,e){t=n(t),e=i(e);var r=this.map[t];this.map[t]=r?r+", "+e:e},a.prototype.delete=function(t){delete this.map[n(t)]},a.prototype.get=function(t){return t=n(t),this.has(t)?this.map[t]:null},a.prototype.has=function(t){return this.map.hasOwnProperty(n(t))},a.prototype.set=function(t,e){this.map[n(t)]=i(e)},a.prototype.forEach=function(t,e){for(var r in this.map)this.map.hasOwnProperty(r)&&t.call(e,this.map[r],r,this)},a.prototype.keys=function(){var t=[];return this.forEach(function(e,r){t.push(r)}),s(t)},a.prototype.values=function(){var t=[];return this.forEach(function(e){t.push(e)}),s(t)},a.prototype.entries=function(){var t=[];return this.forEach(function(e,r){t.push([r,e])}),s(t)},e.iterable&&(a.prototype[Symbol.iterator]=a.prototype.entries);var l=["DELETE","GET","HEAD","OPTIONS","POST","PUT"];function y(t,e){var r,o,n=(e=e||{}).body;if(t instanceof y){if(t.bodyUsed)throw new TypeError("Already read");this.url=t.url,this.credentials=t.credentials,e.headers||(this.headers=new a(t.headers)),this.method=t.method,this.mode=t.mode,this.signal=t.signal,n||null==t._bodyInit||(n=t._bodyInit,t.bodyUsed=!0)}else this.url=String(t);if(this.credentials=e.credentials||this.credentials||"same-origin",!e.headers&&this.headers||(this.headers=new a(e.headers)),this.method=(r=e.method||this.method||"GET",o=r.toUpperCase(),l.indexOf(o)>-1?o:r),this.mode=e.mode||this.mode||null,this.signal=e.signal||this.signal,this.referrer=null,("GET"===this.method||"HEAD"===this.method)&&n)throw new TypeError("Body not allowed for GET or HEAD requests");this._initBody(n)}function p(t){var e=new FormData;return t.trim().split("&").forEach(function(t){if(t){var r=t.split("="),o=r.shift().replace(/\+/g," "),n=r.join("=").replace(/\+/g," ");e.append(decodeURIComponent(o),decodeURIComponent(n))}}),e}function b(t,e){e||(e={}),this.type="default",this.status=void 0===e.status?200:e.status,this.ok=this.status>=200&&this.status<300,this.statusText="statusText"in e?e.statusText:"OK",this.headers=new a(e.headers),this.url=e.url||"",this._initBody(t)}y.prototype.clone=function(){return new y(this,{body:this._bodyInit})},c.call(y.prototype),c.call(b.prototype),b.prototype.clone=function(){return new b(this._bodyInit,{status:this.status,statusText:this.statusText,headers:new a(this.headers),url:this.url})},b.error=function(){var t=new b(null,{status:0,statusText:""});return t.type="error",t};var m=[301,302,303,307,308];b.redirect=function(t,e){if(-1===m.indexOf(e))throw new RangeError("Invalid status code");return new b(null,{status:e,headers:{location:t}})},t.DOMException=self.DOMException;try{new t.DOMException}catch(e){t.DOMException=function(t,e){this.message=t,this.name=e;var r=Error(t);this.stack=r.stack},t.DOMException.prototype=Object.create(Error.prototype),t.DOMException.prototype.constructor=t.DOMException}function w(r,o){return new Promise(function(n,i){var s=new y(r,o);if(s.signal&&s.signal.aborted)return i(new t.DOMException("Aborted","AbortError"));var h=new XMLHttpRequest;function f(){h.abort()}h.onload=function(){var t,e,r={status:h.status,statusText:h.statusText,headers:(t=h.getAllResponseHeaders()||"",e=new a,t.replace(/\r?\n[\t ]+/g," ").split(/\r?\n/).forEach(function(t){var r=t.split(":"),o=r.shift().trim();if(o){var n=r.join(":").trim();e.append(o,n)}}),e)};r.url="responseURL"in h?h.responseURL:r.headers.get("X-Request-URL");var o="response"in h?h.response:h.responseText;n(new b(o,r))},h.onerror=function(){i(new TypeError("Network request failed"))},h.ontimeout=function(){i(new TypeError("Network request failed"))},h.onabort=function(){i(new t.DOMException("Aborted","AbortError"))},h.open(s.method,s.url,!0),"include"===s.credentials?h.withCredentials=!0:"omit"===s.credentials&&(h.withCredentials=!1),"responseType"in h&&e.blob&&(h.responseType="blob"),s.headers.forEach(function(t,e){h.setRequestHeader(e,t)}),s.signal&&(s.signal.addEventListener("abort",f),h.onreadystatechange=function(){4===h.readyState&&s.signal.removeEventListener("abort",f)}),h.send(void 0===s._bodyInit?null:s._bodyInit)})}w.polyfill=!0,self.fetch||(self.fetch=w,self.Headers=a,self.Request=y,self.Response=b),t.Headers=a,t.Request=y,t.Response=b,t.fetch=w,Object.defineProperty(t,"__esModule",{value:!0})});
+
+      function checkResponseStatus(response) {
+        if (response.status >= 200 && response.status < 300) {
+          return response
+        }
+        else {
+          let error = new Error(response.statusText);
+          error.response = response;
+          throw error
+        }
+      }
+
+      function checkCookies() {
+        if (!Cookies.get('UFCCookieTest')) {
+          Cookies.set('UFCCookieTest', 1)
+        }
+        return Cookies.get('UFCCookieTest');
+      }
+
+      function hasStyxkeyRegion() {
+        return Cookies.get('STYXKEY_region');
+      }
+
+      function tryLocale() {
+        return !Cookies.get('UFC_nolocale');
+      }
+
+      function parseJSON(response) {
+        return response.json()
+      }
+
+      if (checkCookies() && !hasStyxkeyRegion() && tryLocale()) {
+        // @todo should we really stop?, stopping because it improves end user experince
+        window.stop();
+        fetch('/ufc/setregion?_format=json', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(checkResponseStatus)
+          .then(parseJSON)
+          .then(function (json) {
+
+            // Write styxkey region
+            if (json.value && !json.redirect) {
+              Cookies.set('STYXKEY_region', json.value, {expires: 1})
+            }
+            // If can redirect and json.redirect exist (basically has a domain name), go to the new domain name
+            if (json.redirect) {
+              var path = window.location.pathname;
+
+              window.location.href = json.redirect + path;
+              return true;
+            }
+
+            // Check now if cookie is set, if not fallback
+            if (!hasStyxkeyRegion()) {
+              let error = new Error(response.statusText);
+              error.response = response;
+              throw error
+            }
+
+            // Now just reload the page to get the new localized verion of the site/page
+            location.reload();
+          }).catch(function (ex) {
+          // Mark this client not try localization for the next 5 mins
+          Cookies.set('UFC_nolocale', 1, {expires: (1 / 24 / 60) * 5});
+          console.log('something went wrong', ex);
+          location.reload();
+        });
+      }
+    </script>
+<link href="/sites/default/files/css/css_eBcV6PN2C2IWwPfaL3Brt_GfZ-SgB_5avE4Yg5QAy_4.css" media="all" rel="stylesheet"/>
+<link href="/modules/custom/ufc_overlay/ufc_overlay.css?rhm6a2" media="all" rel="stylesheet"/>
+<link href="https://assets.sitescdn.net/answers-search-bar/v1.2/answers.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_PX8GIL5sWp28z5O2GhakEvz6da_3vmTy7yTlG1xDCUw.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_NLeLMu-yhOsGxOAeiCOEZI9FqlOZFo6ozuvW1DQNpi0.css" media="all" rel="stylesheet"/>
+<link href="//unpkg.com/aos@next/dist/aos.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_YNDfQRN5FiEtdnIphPU6E79Y5tynGtAwVDvf5XntK-s.css" media="all" rel="stylesheet"/>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"athletes\/all","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en-zxx"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,better_exposed_filters\/auto_submit,better_exposed_filters\/general,classy\/base,classy\/messages,core\/normalize,core\/picturefill,facets\/drupal.facets.link-widget,facets\/drupal.facets.views-ajax,google_analytics\/google_analytics,layout_discovery\/onecol,poll\/drupal.poll-links,system\/base,ufc\/global-css,ufc\/global-js,ufc_facets\/search-with-limit,ufc_localization\/region,ufc_overlay\/ufc_overlay,ufc_search\/ufc_search.all_athletes,ufc_yext\/search_bar,views\/views.ajax,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"ufc","theme_token":null},"ajaxTrustedUrl":{"\/athletes\/all":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ufc_yext":{"api_key":"850a88aeb3c29599ce2db46832aa229f","experience_key":"answers-en","experience_version":"PRODUCTION","account_id":"3668711","answers_url":"https:\/\/answers-embed-client.ufc.com.pagescdn.com","locale":"en","redirect_url":"\/search","search_placeholder":"Search..."},"breakpoints":{"ufc.images.mobile":"","ufc.images.tablet":"(min-width: 700px)","ufc.images.desktop":"(min-width: 1024px)","ufc.images.extra-large":"(min-width: 1440px)"},"facets_views_ajax":{"athletes_residence_country_code":{"view_id":"all_athletes","current_display_id":"page","view_base_path":"","ajax_path":"\/views\/ajax"},"athletes_fighting_style":{"view_id":"all_athletes","current_display_id":"page","view_base_path":"","ajax_path":"\/views\/ajax"},"athletes_weight_class":{"view_id":"all_athletes","current_display_id":"page","view_base_path":"","ajax_path":"\/views\/ajax"},"status":{"view_id":"all_athletes","current_display_id":"page","view_base_path":"","ajax_path":"\/views\/ajax"}},"ufc_facets":{"ufc_facets_search":{"athletes-residence-country-code":{"ufc_facets_limit":10,"ufc_facets_search":1,"ufc_facets_search_placeholder":"Search"}}},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:b74aae0d54d97c0e6fff6b7503fe7cd878a4bdec779593dbdbd7e5dc4d7a7528":{"view_name":"all_athletes","view_display_id":"page","view_args":"","view_path":"\/athletes\/all","view_base_path":null,"view_dom_id":"b74aae0d54d97c0e6fff6b7503fe7cd878a4bdec779593dbdbd7e5dc4d7a7528","pager_element":0}}},"user":{"uid":0,"permissionsHash":"2e8e8cb6a20338cb7ac4dc7ed2b5a62ff74f3708ada6b59e6eaab6c1260eae72"}}</script>
+<script src="/sites/default/files/js/js_1fdWmLo2sJ0Ukek9P5fZJQhtBb7BC7PY0U7mkOUzbE0.js"></script>
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.2/answerstemplates.compiled.min.js"></script>
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.2/answers.min.js"></script>
+</head>
+<body class="fontyourface path-athletes">
+<a class="u-visually--hidden focusable" href="#main-content">
+      Skip to main content
+    </a>
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WFBHZX5" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="l-page">
+<span class="l-page__header-pin" id="header-pin"></span>
+<div class="l-page__header" id="header-wrapper">
+<header class="c-site-header" data-header-state="animate">
+<div class="c-site-header__content">
+<div class="c-site-header__logo">
+<a class="e-logo" href="/">
+<span class="e-logo__icon"><svg aria-hidden="true" class="e-logo__svg"><title>UFC</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</a>
+</div>
+<div class="c-site-header__menu-control">
+<button aria-expanded="false" class="c-site-header__button--menu" data-mobile-menu-component="toggle">
+<span class="c-site-header__button-text">Athletes</span>
+<span class="c-site-header__icon--toggle">
+<svg class="e-svg"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</button>
+</div>
+<div class="c-site-header__menu-panel" data-mobile-menu-component="panel" data-mobile-menu-state="is-hidden">
+<nav aria-labelledby="main-menu-title" class="c-menu-main" id="main-menu" role="navigation">
+<h2 class="u-visually--hidden" id="main-menu-title">Main navigation</h2>
+<ul class="c-menu-main__menu--level-1" data-main-menu="smart-menu">
+<li class="c-menu-main__item--left">
+<a class="events c-menu-main__button--level-1" data-drupal-link-system-path="events" href="/events">Events</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="events" href="/events#events-list-upcoming">Upcoming</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="events" href="/events#events-list-past">Past</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="tickets" href="/tickets" target="_self">Tickets</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufcvip.com/?utm_source=ufc.com&amp;utm_medium=referral&amp;utm_campaign=vip_packages-main_menu_events_dropdown">VIP Experiences</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/groupsales">Group Sales</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--left">
+<a class="c-menu-main__button--level-1" data-drupal-link-system-path="rankings" href="/rankings" target="_self">Rankings</a>
+</li>
+<li class="c-menu-main__item--left is-active">
+<a class="athletes c-menu-main__button--level-1 is-active" data-drupal-link-system-path="athletes" href="/athletes" target="_self">Athletes</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below is-active">
+<a class="c-menu-main__button--level-2 is-active" data-drupal-link-system-path="athletes/all" href="/athletes/all" target="_self">All Athletes</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="http://statleaders.ufc.com/" target="_self">Record Book</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--left">
+<a class="trending c-menu-main__button--level-1" data-drupal-link-system-path="trending/all" href="/trending/all">News</a>
+</li>
+<li class="c-menu-main__item--home">
+<a class="home c-menu-main__button--home" data-drupal-link-system-path="home" href="/home">
+<div class="e-logo">
+<span class="e-logo__icon"><svg aria-hidden="true" class="e-logo__svg"><title>UFC</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</div>
+</a>
+</li>
+<li class="c-menu-main__item--right is-pushed">
+<a class="c-menu-main__button--level-1" data-drupal-link-system-path="watch/library" href="/watch/library" target="_self">Videos</a>
+</li>
+<li class="c-menu-main__item--right">
+<a class="connect c-menu-main__button--level-1" href="https://www.ufc.com/newsletter">Connect</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/newsletter" target="_self">Newsletter</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/performance-institute/" target="_self">UFC Performance Institute</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufcapex.com">UFC Apex</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://link.ufcultimatesound.com/website-ufc" target="_self">UFC Ultimate Sound</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="http://www.ufcgym.com" target="_blank">Find a Gym</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://go.ea.com/ufcmobile2" target="_self">EA SPORTS™ UFC® Mobile 2</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ea.com/games/ufc/ufc-4" target="_blank">EA Sports UFC 4</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://sportsbook.draftkings.com/leagues/mma/2162" target="_self">Betting Odds</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--right">
+<a class="watch c-menu-main__button--level-1" data-drupal-link-system-path="watch" href="/watch" target="_self">Watch</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="watch" href="/watch" target="_blank">How to Watch</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/bars" target="_self">Find a Bar</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufcfightpass.com" target="_blank">UFC Fight Pass</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--right">
+<a class="c-menu-main__button--level-1" href="https://ufcstore.com" target="_blank">SHOP</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufcstore.com">UFC STORE</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufccollectibles.com/?utm_source=referral&amp;utm_medium=ufc%20website%20navigation%20link&amp;utm_campaign=partner-referral">UFC COLLECTIBLES </a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="node/116829" href="/nfts">NFT</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="c-site-header__search-control">
+<button aria-expanded="false" class="c-site-header__button--search" data-search-btn="">
+<span class="c-site-header__icon--search e-icon--xsmall"><svg class="e-icon__svg search"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><svg class="e-svg close"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</button>
+</div>
+<div class="c-site-header__search-panel" data-search-panel="" data-search-state="is-hidden">
+<div class="search-form"></div>
+</div>
+</div>
+</header>
+</div>
+<div class="l-page__pre-content">
+<div class="hidden" data-drupal-messages-fallback=""></div>
+</div>
+<div class="l-page__utilities">
+</div>
+<main class="l-page__main">
+<a id="main-content" tabindex="-1"></a>
+<div class="l-page__content">
+<div class="l-main">
+<div>
+<div>
+<div class="l-main__content">
+<div class="l-main__system-content">
+<div class="block block-system block-system-main-block" id="block-mainpagecontent">
+<div class="ds-1col ds-1col-filters clearfix">
+<div class="block-region-ds-content"><div class="block block-core block-page-title-block">
+<h1 class="page-title">Athletes - All</h1>
+</div>
+<div class="views-element-container block block-views block-views-blockall-athletes-page">
+<div><div class="js-view-dom-id-b74aae0d54d97c0e6fff6b7503fe7cd878a4bdec779593dbdbd7e5dc4d7a7528 view-all-athletes view-id-all_athletes">
+<form accept-charset="UTF-8" action="/athletes/all" class="views-exposed-form bef-exposed-form" data-bef-auto-submit="" data-bef-auto-submit-delay="500" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-all-athletes-page" id="views-exposed-form-all-athletes-page" method="get">
+<div class="form--inline clearfix">
+<fieldset class="athele-all-gender fieldgroup form-composite js-form-item form-item js-form-wrapper form-wrapper" data-drupal-selector="edit-gender" id="edit-gender--wrapper">
+<legend>
+<span class="fieldset-legend"></span>
+</legend>
+<div class="fieldset-wrapper">
+<div class="form-radios" id="edit-gender"><div class="form-radios">
+<div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-gender form-item-gender">
+<input checked="checked" class="form-radio" data-drupal-selector="edit-gender-all" id="edit-gender-all" name="gender" type="radio" value="All"/>
+<label class="option" for="edit-gender-all">All</label>
+</div>
+<div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-gender form-item-gender">
+<input class="form-radio" data-drupal-selector="edit-gender-2" id="edit-gender-2" name="gender" type="radio" value="2"/>
+<label class="option" for="edit-gender-2">Women</label>
+</div>
+<div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-gender form-item-gender">
+<input class="form-radio" data-drupal-selector="edit-gender-1" id="edit-gender-1" name="gender" type="radio" value="1"/>
+<label class="option" for="edit-gender-1">Men</label>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+<div class="athletes-all-current-filters">
+<div class="filter-control filter-options-container invisible">
+<div class="filter-control-header">
+<span class="filter-number">0</span>
+<span class="filter-dropdown-label"> Filters</span>
+<span class="btn-filter-open">
+<i class="icon-triangle-down"></i>
+</span>
+</div>
+<ul class="filter-control-list filters-ul">
+</ul>
+</div>
+</div><div class="althelete-total">2732 Athletes</div><div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search form-no-label">
+<input class="ufc-search-instant-search form-text" data-drupal-selector="edit-search" id="edit-search" maxlength="128" name="search" placeholder="Search for Athletes" size="30" type="text" value=""/>
+</div>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input class="js-hide button js-form-submit form-submit" data-bef-auto-submit-click="" data-drupal-selector="edit-submit-all-athletes" id="edit-submit-all-athletes" type="submit" value="Apply"/>
+</div>
+</div>
+</form>
+<div class="view-items-outer-wrp">
+<div class="view-items-wrp">
+<div class="views-infinite-scroll-content-wrapper clearfix" data-drupal-views-infinite-scroll-content-wrapper="">
+<div class="item-list">
+<ul class="l-flex--4col-1to4">
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail"><img src="/themes/custom/ufc/assets/img/no-profile-image.png"/></div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Asjabharan _
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Bantamweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">0-0-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg"></div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Asjabharan _ 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/asjabharan"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/2022-06/b7ca2801-12f5-400a-9bc0-0efa8a0794e7%252FANGAA_RTU.png?h=a30e7339&amp;itok=VkE-FUse" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Angga -
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Featherweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">0-1-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="370" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/2022-06/1cec21c3-e5c7-4d63-ab11-8d1c371b8b89%252FANGAA_R.png?itok=TE2oCUuM" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Angga - 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/angga"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/angga_thehitman" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail"><img src="/themes/custom/ufc/assets/img/no-profile-image.png"/></div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"The Assassin"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Danny Abbadi
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Lightweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">2-2-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg"></div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"The Assassin"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Danny Abbadi 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/danny-abbadi"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail"><img src="/themes/custom/ufc/assets/img/no-profile-image.png"/></div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Nariman Abbassov
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Lightweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">0-0-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg"></div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Nariman Abbassov 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/nariman-abbassov"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail"><img src="/themes/custom/ufc/assets/img/no-profile-image.png"/></div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Tank"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Tank Abbott
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Heavyweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">8-10-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg"></div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Tank"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Tank Abbott 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/tank-abbott"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/2022-07/ABDELWAHAB_HAMDY_07-30.png?h=a30e7339&amp;itok=hQJx5TxB" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"The Hammer"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Hamdy Abdelwahab
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Heavyweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">6-0-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="580" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/2022-07/ABDELWAHAB_HAMDY_R_07-30.png?itok=pAbtNV-r" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"The Hammer"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Hamdy Abdelwahab 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/hamdy-abdelwahab"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://twitter.com/Hamdyabdelwah" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Twitter</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/hamdy.abdelwahab1" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/2021-09/69243%252Fprofile-galery%252Fprofile-picture%252FABDURAKHIMOV_SHAMIL_09-25.png?h=a30e7339&amp;itok=y86ngCdS" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Abrek"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Shamil Abdurakhimov
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Heavyweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">20-7-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="536" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/2021-11/ABDURAKHIMOV_SHAMIL_R_09-25.png?itok=qzq8I3q9" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Abrek"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Shamil Abdurakhimov 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/shamil-abdurakhimov"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://twitter.com/ShamilAbrek" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Twitter</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/shamilabdurakhimov" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/image/fighter_images/Abe_Daichi/ABE_DAICHI.png?VersionId=Gx2Allivy3oKkZamLbgkgbsXl8hgslKN&amp;itok=qKm_pbYw" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Daichi Abe
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Welterweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">6-1-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="639" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/image/fighter_images/Abe_Daichi/ABE_DAICHI_R.png?VersionId=_2fn0JUN6brgZ0A3eNHLioRrn3DOK_e.&amp;itok=BnrmtYk0" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname"></span>
+<span class="c-listing-athlete__name">
+          Daichi Abe 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/daichi-abe"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://facebook.com/daichi.MMA?ref=br_rs" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Facebook</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://twitter.com/mma_daichi" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Twitter</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/daa1127" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/image/fighter_images/Papy_Abedi/PapyAbedi_Headshot.png?VersionId=H5MXVwOvs68wCCFcOAFzR2mqYM1XtAlF&amp;itok=GMrAN0qT" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Makambo"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Papy Abedi
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Middleweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">9-3-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="625" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/2022-03/503efe47-c6b3-4a88-9a40-d9d13de9e1f1%252FPapy-Abedi_205746_RightFullBodyImage.png?itok=nSwvDkUW" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Makambo"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Papy Abedi 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/papy-abedi"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://facebook.com/Unavailable  " target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Facebook</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://twitter.com/TeamMakambo" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Twitter</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/makamboabedi" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/image/fighter_images/Ricardo_Abreu/RicardoAbreu_Headshot.png?VersionId=rGq1a.vOlyv1ljPq9MVWSEL0mlFZVzQN&amp;itok=JSNjn9Q1" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Demente"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Ricardo Abreu
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Middleweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">5-1-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="677" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/image/ufc-fighter-container/69075/profile-galery/fullbodyright-picture/ricardo-abreu_477654_RightFullBodyImage.png?VersionId=tfHwzSh5p3yVY_QBsgE9G3hd0lPlRWql&amp;itok=ptFN4L_P" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"Demente"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Ricardo Abreu 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/ricardo-abreu"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://facebook.com/ricardodemente" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Facebook</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://twitter.com/ricardodemente" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Twitter</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/ricardodementeoficial" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div class="node node--type-athlete node--view-mode-all-athletes-result ds-1col clearfix">
+<div class="c-listing-athlete-flipcard white">
+<div class="c-listing-athlete-flipcard__inner">
+<div class="c-listing-athlete-flipcard__front">
+<div class="c-listing-athlete__thumbnail">
+<div class="field field--name-image field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-teaser" height="300" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/teaser/s3/image/ufc-fighter-container/68520/profile-galery/profile-picture/ABREU_KLIDSON.png?VersionId=86IDWVShK5gAjaAgU_.t5UddLKzVkx64&amp;itok=dIQvzkOj" width="400"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete__text">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"White Bear"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Klidson Abreu
+        </span>
+<span class="c-listing-athlete__title">
+<div class="field field--name-stats-weight-class field--type-entity-reference field--label-hidden field__items">
+<div class="field__item">Light Heavyweight</div>
+</div>
+</span>
+<span class="c-listing-athlete__record">15-4-0 (W-L-D)</span>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__back">
+<div class="c-listing-athlete__bgimg">
+<div class="field field--name-image-body-right field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<img class="image-style-event-fight-card-upper-body-of-standing-athlete" height="573" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_fight_card_upper_body_of_standing_athlete/s3/2019-02/ABREU_KLIDSON_R_0.png?VersionId=..g59IyoCoRKm4MROq4lq4QRUqW5mW28&amp;itok=-m4Jr5sw" width="185"/>
+</div>
+</div>
+</div>
+</div>
+<div class="c-listing-athlete-flipcard__text__back">
+<span class="c-listing-athlete__nickname">
+<div class="field field--name-nickname field--type-string field--label-hidden">
+<div class="field__item">"White Bear"</div>
+</div>
+</span>
+<span class="c-listing-athlete__name">
+          Klidson Abreu 
+        </span>
+</div>
+<div class="c-listing-athlete-flipcard__action">
+<a class="e-button--black" href="/athlete/klidson-abreu"><span class="e-button__text">
+    
+    Athlete Profile
+  </span></a>
+</div>
+<div class="c-listing-athlete-flipcard__footer">
+<h4>Follow</h4>
+<ul class="c-listing-athlete-flipcard__social-menu">
+<li class="c-listing-athlete-flipcard__social-item">
+<a class="c-listing-athlete-flipcard__social-link" href="https://instagram.com/klidsonabreu" target="_blank"><span class="c-listing-athlete-flipcard__social-icon">
+<span class="e-icon--small"><svg class="e-icon__svg"><title>Instagram</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</span></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="l-flex__item">
+<div id="js-dfp-tag-athletes_250">
+<script type="text/javascript">
+            googletag.cmd.push(function() {
+                googletag.display('js-dfp-tag-athletes_250');
+            });
+    
+    </script>
+</div>
+</li>
+</ul>
+</div>
+<div class="view view-promos-panel-views view-id-promos_panel_views view-display-id-brand_voice js-view-dom-id-5616e177ffed7355520efc62a2535604d2912d9a3ba4680836a2187eae5729cb">
+</div>
+</div>
+</div>
+<div class="sticky-filter-btn">
+<a class="e-button--small"><span class="e-button__text">
+    
+    Filters
+  </span></a>
+</div>
+</div>
+<ul class="js-pager__items pager" data-drupal-views-infinite-scroll-pager="">
+<li class="pager__item">
+<a class="button" href="?gender=All&amp;search=&amp;page=1" rel="next" title="Load more items">Load More</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="views-element-container block block-views block-views-blockcontent-footer-new-block-2">
+<div><div class="view view-content-footer-new view-id-content_footer_new view-display-id-block_2 js-view-dom-id-2a540857a5688ad01a9420f07a8ed1e2253303a596769cc0737699daa40dc6ba">
+<div class="view-content">
+<div>:
+
+
+
+
+      
+
+<div class="l-container">
+<div class="l-container__content">
+<div class="c-three-up">
+<div class="c-three-up__item">
+<article class="c-card--content-footer">
+<div class="c-card__media--content-footer">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x1/s3/2022-03/GettyImages-1350264147.jpg?itok=kL4uuP7s 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x2/s3/2022-03/GettyImages-1350264147.jpg?itok=lPQFPwwt 2x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x1/s3/2022-03/GettyImages-1350264147.jpg?itok=NckbBEKw 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x2/s3/2022-03/GettyImages-1350264147.jpg?itok=Qa8jnzgD 2x" type="image/jpeg"/>
+<img alt="Khamzat Chimaev of Sweden reacts after his victory over Li Jingliang of China in a welterweight fight during the UFC 267 event at Etihad Arena on October 30, 2021 in Yas Island, Abu Dhabi, United Arab Emirates. (Photo by Chris Unger/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x1/s3/2022-03/GettyImages-1350264147.jpg?itok=NckbBEKw"/>
+</picture>
+</div>
+</div>
+</div>
+<div class="c-card__info--content-footer">
+<span class="c-card__info-prefix--content-footer">Athletes</span> </div>
+<div class="c-card__title_text">
+<div class="c-card__headline--content-footer">
+<h3 class="e-t3" id="n-114820">
+        Khamzat Chimaev | Best Moments
+      </h3>
+</div>
+<div class="c-card__body--content-footer e-p--small">
+<div class="clearfix text-formatted field field--name-teaser field--type-text-long field--label-hidden field__item"><p>Take A Look Back At How Khamzat Chimaev Has Become One Of The Hottest Athletes In MMA.</p>
+</div>
+</div>
+</div>
+<div class="c-card__action--content-footer">
+<a aria-labelledby="n-114820" class="e-button--minimal" data-modal-callback="/ajax/modal/node/114820" href="/video/khamzat-chimaev-best-moments-welterweight-ufc-279"><span class="e-button__text">
+    
+    Watch the Video
+  </span></a>
+</div>
+</article>
+</div>
+<div class="c-three-up__item">
+<article class="c-card--content-footer">
+<div class="c-card__media--content-footer">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x1/s3/2022-08/122220-Dana-White-Backstage-General.jpeg?itok=4-U0Zxas 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x2/s3/2022-08/122220-Dana-White-Backstage-General.jpeg?itok=CEyKtPz5 2x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x1/s3/2022-08/122220-Dana-White-Backstage-General.jpeg?itok=FF5R7ngZ 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x2/s3/2022-08/122220-Dana-White-Backstage-General.jpeg?itok=nVl-vzva 2x" type="image/jpeg"/>
+<img alt="UFC President Dana White" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_mobile_x1/s3/2022-08/122220-Dana-White-Backstage-General.jpeg?itok=FF5R7ngZ"/>
+</picture>
+</div>
+</div>
+</div>
+<div class="c-card__info--content-footer">
+<span class="c-card__info-prefix--content-footer">Special Feature</span> </div>
+<div class="c-card__title_text">
+<div class="c-card__headline--content-footer">
+<h3 class="e-t3" id="n-122492">
+        Dana White | The UFC vs The Media
+      </h3>
+</div>
+<div class="c-card__body--content-footer e-p--small">
+<div class="clearfix text-formatted field field--name-teaser field--type-text-long field--label-hidden field__item"><p>UFC President Dana White Answers The Critics Who Said He Couldn't Keep The Company Moving Forward During The Global Pandemic</p>
+</div>
+</div>
+</div>
+<div class="c-card__action--content-footer">
+<a aria-labelledby="n-122492" class="e-button--minimal" data-modal-callback="/ajax/modal/node/122492" href="/video/dana-white-vs-critics-media-vs-ufc-fight-island"><span class="e-button__text">
+    
+    Watch the Video
+  </span></a>
+</div>
+</article>
+</div>
+<div class="c-three-up__item">
+<article class="c-card--content-footer">
+<div class="c-card__media--content-footer">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x1/s3/2022-08/082422-HERO_ufc-welcomes-new-england-patriots-to-las-vegas-hq.jpg?itok=MNNw87Jb 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_content_footer_desktop_x2/s3/2022-08/082422-HERO_ufc-welcomes-new-england-patriots-to-las-vegas-hq.jpg?itok=msSsovfD 2x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_trending_mobile_x1/s3/2022-08/082422-HERO_ufc-welcomes-new-england-patriots-to-las-vegas-hq.jpg?itok=-nhNonY_ 1x, https://dmxg5wxfqgb4u.cloudfront.net/styles/card_trending_mobile_x2/s3/2022-08/082422-HERO_ufc-welcomes-new-england-patriots-to-las-vegas-hq.jpg?itok=ZocIJ98I 2x" type="image/jpeg"/>
+<img alt="UFC President Dana White and New England Patriots head coach Bill Belichick pose for a picture at the UFC headquarters in Las Vegas, Nevada. (Photo by Chris Unger/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_trending_mobile_x1/s3/2022-08/082422-HERO_ufc-welcomes-new-england-patriots-to-las-vegas-hq.jpg?itok=-nhNonY_"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__info--content-footer">
+<span class="c-card__info-prefix--content-footer">UFC Performance Institute</span> </div>
+<div class="c-card__title_text">
+<div class="c-card__headline--content-footer">
+<h3 class="e-t3" id="n-122908">
+        New England Patriots Visit UFC Headquarters
+      </h3>
+</div>
+<div class="c-card__body--content-footer e-p--small">
+<div class="clearfix text-formatted field field--name-teaser field--type-text-long field--label-hidden field__item"><p>Patriots Head Coach Bill Belichick And Players Tour The UFC Performance Institute Alongside UFC President Dana White</p>
+</div>
+</div>
+</div>
+<div class="c-card__action--content-footer">
+<a aria-labelledby="n-122908" class="e-button--minimal" href="/news/new-england-patriots-visit-ufc-headquarters-performance-institute"><span class="e-button__text">
+    
+    More
+  </span></a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+:</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="l-page_filters">
+<div class="facet-filter-top-nav">
+<div class="facet-filter__inner">
+<span class="facet-tnav-label">Filter <span class="facet-tnav-label--white"> 524 Athletes </span></span>
+</div>
+<div class="facet-filter__close">
+<span class="e-icon"><svg aria-hidden="true" class="e-icon__svg"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</div>
+</div>
+<div class="facets-blks-wrp">
+<div class="filter-shade"></div>
+<div class="sidebar-first-inner-wrp">
+<div class="block-region-ds-filters"><div class="facet-inactive block-facets-ajax js-facet-block-id-facet_block:status block-facet--links block block-facets block-facet-blockstatus">
+<div class="block-facets__header">
+<div class="facet-hwrp">
+<span class="facet-label">By Collections</span>
+<div class="js-cfilters facets-cfs"><span class="cfs-label">All</span></div>
+</div>
+</div>
+<div class="facets-widget-links">
+<ul class="facet-inactive js-facets-links item-list__links" data-drupal-facet-alias="status" data-drupal-facet-id="status"><li>All</li><li class="facet-item"><a data-drupal-facet-item-count="1629" data-drupal-facet-item-id="status-778" data-drupal-facet-item-value="778" href="/athletes/all?filters%5B0%5D=status%3A778" rel="nofollow"><span class="facet-item__value">Not Fighting</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="728" data-drupal-facet-item-id="status-23" data-drupal-facet-item-value="23" href="/athletes/all?filters%5B0%5D=status%3A23" rel="nofollow"><span class="facet-item__value">Active</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="94" data-drupal-facet-item-id="status-319" data-drupal-facet-item-value="319" href="/athletes/all?filters%5B0%5D=status%3A319" rel="nofollow"><span class="facet-item__value">Retired</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="30" data-drupal-facet-item-id="status-8146" data-drupal-facet-item-value="8146" href="/athletes/all?filters%5B0%5D=status%3A8146" rel="nofollow"><span class="facet-item__value">Dana White's Contender Series</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="13" data-drupal-facet-item-id="status-4" data-drupal-facet-item-value="4" href="/athletes/all?filters%5B0%5D=status%3A4" rel="nofollow"><span class="facet-item__value">Title Holder</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="8" data-drupal-facet-item-id="status-3" data-drupal-facet-item-value="3" href="/athletes/all?filters%5B0%5D=status%3A3" rel="nofollow"><span class="facet-item__value">Hall of Fame</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="8" data-drupal-facet-item-id="status-779" data-drupal-facet-item-value="779" href="/athletes/all?filters%5B0%5D=status%3A779" rel="nofollow"><span class="facet-item__value">Released</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="status-5" data-drupal-facet-item-value="5" href="/athletes/all?filters%5B0%5D=status%3A5" rel="nofollow"><span class="facet-item__value">Interim Title Holder</span>
+</a></li></ul>
+</div>
+</div>
+<div class="facet-inactive block-facets-ajax js-facet-block-id-facet_block:athletes_weight_class block-facet--links block block-facets block-facet-blockathletes-weight-class">
+<div class="block-facets__header">
+<div class="facet-hwrp">
+<span class="facet-label">BY DIVISION</span>
+<div class="js-cfilters facets-cfs"><span class="cfs-label">All</span></div>
+</div>
+</div>
+<div class="facets-widget-links">
+<ul class="facet-inactive js-facets-links item-list__links" data-drupal-facet-alias="weight_class" data-drupal-facet-id="athletes_weight_class"><li>All</li><li class="facet-item"><a data-drupal-facet-item-count="155" data-drupal-facet-item-id="weight-class-10" data-drupal-facet-item-value="10" href="/athletes/all?filters%5B0%5D=weight_class%3A10" rel="nofollow"><span class="facet-item__value">Flyweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="257" data-drupal-facet-item-id="weight-class-8" data-drupal-facet-item-value="8" href="/athletes/all?filters%5B0%5D=weight_class%3A8" rel="nofollow"><span class="facet-item__value">Bantamweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="255" data-drupal-facet-item-id="weight-class-9" data-drupal-facet-item-value="9" href="/athletes/all?filters%5B0%5D=weight_class%3A9" rel="nofollow"><span class="facet-item__value">Featherweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="444" data-drupal-facet-item-id="weight-class-12" data-drupal-facet-item-value="12" href="/athletes/all?filters%5B0%5D=weight_class%3A12" rel="nofollow"><span class="facet-item__value">Lightweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="431" data-drupal-facet-item-id="weight-class-15" data-drupal-facet-item-value="15" href="/athletes/all?filters%5B0%5D=weight_class%3A15" rel="nofollow"><span class="facet-item__value">Welterweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="369" data-drupal-facet-item-id="weight-class-14" data-drupal-facet-item-value="14" href="/athletes/all?filters%5B0%5D=weight_class%3A14" rel="nofollow"><span class="facet-item__value">Middleweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="218" data-drupal-facet-item-id="weight-class-13" data-drupal-facet-item-value="13" href="/athletes/all?filters%5B0%5D=weight_class%3A13" rel="nofollow"><span class="facet-item__value">Light Heavyweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="277" data-drupal-facet-item-id="weight-class-11" data-drupal-facet-item-value="11" href="/athletes/all?filters%5B0%5D=weight_class%3A11" rel="nofollow"><span class="facet-item__value">Heavyweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="99" data-drupal-facet-item-id="weight-class-16" data-drupal-facet-item-value="16" href="/athletes/all?filters%5B0%5D=weight_class%3A16" rel="nofollow"><span class="facet-item__value">Women's Strawweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="78" data-drupal-facet-item-id="weight-class-38" data-drupal-facet-item-value="38" href="/athletes/all?filters%5B0%5D=weight_class%3A38" rel="nofollow"><span class="facet-item__value">Women's Flyweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="64" data-drupal-facet-item-id="weight-class-37" data-drupal-facet-item-value="37" href="/athletes/all?filters%5B0%5D=weight_class%3A37" rel="nofollow"><span class="facet-item__value">Women's Bantamweight</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="14" data-drupal-facet-item-id="weight-class-39" data-drupal-facet-item-value="39" href="/athletes/all?filters%5B0%5D=weight_class%3A39" rel="nofollow"><span class="facet-item__value">Women's Featherweight</span>
+</a></li></ul>
+</div>
+</div>
+<div class="facet-inactive block-facets-ajax js-facet-block-id-facet_block:athletes_fighting_style block-facet--links block block-facets block-facet-blockathletes-fighting-style">
+<div class="block-facets__header">
+<div class="facet-hwrp">
+<span class="facet-label">By Fighting Style</span>
+<div class="js-cfilters facets-cfs"><span class="cfs-label">All</span></div>
+</div>
+</div>
+<div class="facets-widget-links">
+<ul class="facet-inactive js-facets-links item-list__links" data-drupal-facet-alias="fighting_style" data-drupal-facet-id="athletes_fighting_style"><li>All</li><li class="facet-item"><a data-drupal-facet-item-count="230" data-drupal-facet-item-id="fighting-style-7146" data-drupal-facet-item-value="7146" href="/athletes/all?filters%5B0%5D=fighting_style%3A7146" rel="nofollow"><span class="facet-item__value">MMA</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="23" data-drupal-facet-item-id="fighting-style-7886" data-drupal-facet-item-value="7886" href="/athletes/all?filters%5B0%5D=fighting_style%3A7886" rel="nofollow"><span class="facet-item__value">Wrestler</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="fighting-style-8138" data-drupal-facet-item-value="8138" href="/athletes/all?filters%5B0%5D=fighting_style%3A8138" rel="nofollow"><span class="facet-item__value">Wrestling</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="fighting-style-7209" data-drupal-facet-item-value="7209" href="/athletes/all?filters%5B0%5D=fighting_style%3A7209" rel="nofollow"><span class="facet-item__value">Sambo</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="fighting-style-7163" data-drupal-facet-item-value="7163" href="/athletes/all?filters%5B0%5D=fighting_style%3A7163" rel="nofollow"><span class="facet-item__value">Taekwondo</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="fighting-style-6886" data-drupal-facet-item-value="6886" href="/athletes/all?filters%5B0%5D=fighting_style%3A6886" rel="nofollow"><span class="facet-item__value">Kung Fu</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="7" data-drupal-facet-item-id="fighting-style-7823" data-drupal-facet-item-value="7823" href="/athletes/all?filters%5B0%5D=fighting_style%3A7823" rel="nofollow"><span class="facet-item__value">Brawler</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="13" data-drupal-facet-item-id="fighting-style-7160" data-drupal-facet-item-value="7160" href="/athletes/all?filters%5B0%5D=fighting_style%3A7160" rel="nofollow"><span class="facet-item__value">Judo</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="15" data-drupal-facet-item-id="fighting-style-7180" data-drupal-facet-item-value="7180" href="/athletes/all?filters%5B0%5D=fighting_style%3A7180" rel="nofollow"><span class="facet-item__value">Karate</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="23" data-drupal-facet-item-id="fighting-style-7143" data-drupal-facet-item-value="7143" href="/athletes/all?filters%5B0%5D=fighting_style%3A7143" rel="nofollow"><span class="facet-item__value">Boxer</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="119" data-drupal-facet-item-id="fighting-style-7144" data-drupal-facet-item-value="7144" href="/athletes/all?filters%5B0%5D=fighting_style%3A7144" rel="nofollow"><span class="facet-item__value">Freestyle</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="25" data-drupal-facet-item-id="fighting-style-7152" data-drupal-facet-item-value="7152" href="/athletes/all?filters%5B0%5D=fighting_style%3A7152" rel="nofollow"><span class="facet-item__value">Grappler</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="29" data-drupal-facet-item-id="fighting-style-7150" data-drupal-facet-item-value="7150" href="/athletes/all?filters%5B0%5D=fighting_style%3A7150" rel="nofollow"><span class="facet-item__value">Brazilian Jiu-Jitsu</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="31" data-drupal-facet-item-id="fighting-style-6888" data-drupal-facet-item-value="6888" href="/athletes/all?filters%5B0%5D=fighting_style%3A6888" rel="nofollow"><span class="facet-item__value">Boxing</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="38" data-drupal-facet-item-id="fighting-style-7148" data-drupal-facet-item-value="7148" href="/athletes/all?filters%5B0%5D=fighting_style%3A7148" rel="nofollow"><span class="facet-item__value">Kickboxer</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="59" data-drupal-facet-item-id="fighting-style-7145" data-drupal-facet-item-value="7145" href="/athletes/all?filters%5B0%5D=fighting_style%3A7145" rel="nofollow"><span class="facet-item__value">Jiu-Jitsu</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="72" data-drupal-facet-item-id="fighting-style-7147" data-drupal-facet-item-value="7147" href="/athletes/all?filters%5B0%5D=fighting_style%3A7147" rel="nofollow"><span class="facet-item__value">Muay Thai</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="102" data-drupal-facet-item-id="fighting-style-6887" data-drupal-facet-item-value="6887" href="/athletes/all?filters%5B0%5D=fighting_style%3A6887" rel="nofollow"><span class="facet-item__value">Striker</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="fighting-style-8142" data-drupal-facet-item-value="8142" href="/athletes/all?filters%5B0%5D=fighting_style%3A8142" rel="nofollow"><span class="facet-item__value">Kung-Fu</span>
+</a></li></ul>
+</div>
+</div>
+<div class="facet-inactive block-facets-ajax js-facet-block-id-facet_block:athletes_residence_country_code block-facet--ufc-facets-links block block-facets block-facet-blockathletes-residence-country-code">
+<div class="block-facets__header">
+<div class="facet-hwrp">
+<span class="facet-label">BY LOCATION</span>
+<div class="js-cfilters facets-cfs"><span class="cfs-label">All</span></div>
+</div>
+</div>
+<div class="facets-widget-ufc_facets_links">
+<ul class="facet-inactive item-list__ufc_facets_links" data-drupal-facet-alias="location" data-drupal-facet-id="athletes_residence_country_code" data-ufc-facet-id="athletes-residence-country-code"><li>All</li><li class="facet-item"><a data-drupal-facet-item-count="7" data-drupal-facet-item-id="location-ar" data-drupal-facet-item-value="AR" href="/athletes/all?filters%5B0%5D=location%3AAR" rel="nofollow"><span class="facet-item__value">Argentina</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-am" data-drupal-facet-item-value="AM" href="/athletes/all?filters%5B0%5D=location%3AAM" rel="nofollow"><span class="facet-item__value">Armenia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="40" data-drupal-facet-item-id="location-au" data-drupal-facet-item-value="AU" href="/athletes/all?filters%5B0%5D=location%3AAU" rel="nofollow"><span class="facet-item__value">Australia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="4" data-drupal-facet-item-id="location-at" data-drupal-facet-item-value="AT" href="/athletes/all?filters%5B0%5D=location%3AAT" rel="nofollow"><span class="facet-item__value">Austria</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-az" data-drupal-facet-item-value="AZ" href="/athletes/all?filters%5B0%5D=location%3AAZ" rel="nofollow"><span class="facet-item__value">Azerbaijan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-be" data-drupal-facet-item-value="BE" href="/athletes/all?filters%5B0%5D=location%3ABE" rel="nofollow"><span class="facet-item__value">Belgium</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="212" data-drupal-facet-item-id="location-br" data-drupal-facet-item-value="BR" href="/athletes/all?filters%5B0%5D=location%3ABR" rel="nofollow"><span class="facet-item__value">Brazil</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-bg" data-drupal-facet-item-value="BG" href="/athletes/all?filters%5B0%5D=location%3ABG" rel="nofollow"><span class="facet-item__value">Bulgaria</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="76" data-drupal-facet-item-id="location-ca" data-drupal-facet-item-value="CA" href="/athletes/all?filters%5B0%5D=location%3ACA" rel="nofollow"><span class="facet-item__value">Canada</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-cl" data-drupal-facet-item-value="CL" href="/athletes/all?filters%5B0%5D=location%3ACL" rel="nofollow"><span class="facet-item__value">Chile</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="26" data-drupal-facet-item-id="location-cn" data-drupal-facet-item-value="CN" href="/athletes/all?filters%5B0%5D=location%3ACN" rel="nofollow"><span class="facet-item__value">China</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-co" data-drupal-facet-item-value="CO" href="/athletes/all?filters%5B0%5D=location%3ACO" rel="nofollow"><span class="facet-item__value">Colombia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-cr" data-drupal-facet-item-value="CR" href="/athletes/all?filters%5B0%5D=location%3ACR" rel="nofollow"><span class="facet-item__value">Costa Rica</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="4" data-drupal-facet-item-id="location-hr" data-drupal-facet-item-value="HR" href="/athletes/all?filters%5B0%5D=location%3AHR" rel="nofollow"><span class="facet-item__value">Croatia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-cz" data-drupal-facet-item-value="CZ" href="/athletes/all?filters%5B0%5D=location%3ACZ" rel="nofollow"><span class="facet-item__value">Czechia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="7" data-drupal-facet-item-id="location-dk" data-drupal-facet-item-value="DK" href="/athletes/all?filters%5B0%5D=location%3ADK" rel="nofollow"><span class="facet-item__value">Denmark</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-ec" data-drupal-facet-item-value="EC" href="/athletes/all?filters%5B0%5D=location%3AEC" rel="nofollow"><span class="facet-item__value">Ecuador</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="location-fi" data-drupal-facet-item-value="FI" href="/athletes/all?filters%5B0%5D=location%3AFI" rel="nofollow"><span class="facet-item__value">Finland</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="14" data-drupal-facet-item-id="location-fr" data-drupal-facet-item-value="FR" href="/athletes/all?filters%5B0%5D=location%3AFR" rel="nofollow"><span class="facet-item__value">France</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-ge" data-drupal-facet-item-value="GE" href="/athletes/all?filters%5B0%5D=location%3AGE" rel="nofollow"><span class="facet-item__value">Georgia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="14" data-drupal-facet-item-id="location-de" data-drupal-facet-item-value="DE" href="/athletes/all?filters%5B0%5D=location%3ADE" rel="nofollow"><span class="facet-item__value">Germany</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-gr" data-drupal-facet-item-value="GR" href="/athletes/all?filters%5B0%5D=location%3AGR" rel="nofollow"><span class="facet-item__value">Greece</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-gu" data-drupal-facet-item-value="GU" href="/athletes/all?filters%5B0%5D=location%3AGU" rel="nofollow"><span class="facet-item__value">Guam</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-hk" data-drupal-facet-item-value="HK" href="/athletes/all?filters%5B0%5D=location%3AHK" rel="nofollow"><span class="facet-item__value">Hong Kong SAR China</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-hu" data-drupal-facet-item-value="HU" href="/athletes/all?filters%5B0%5D=location%3AHU" rel="nofollow"><span class="facet-item__value">Hungary</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-is" data-drupal-facet-item-value="IS" href="/athletes/all?filters%5B0%5D=location%3AIS" rel="nofollow"><span class="facet-item__value">Iceland</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-in" data-drupal-facet-item-value="IN" href="/athletes/all?filters%5B0%5D=location%3AIN" rel="nofollow"><span class="facet-item__value">India</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="13" data-drupal-facet-item-id="location-ie" data-drupal-facet-item-value="IE" href="/athletes/all?filters%5B0%5D=location%3AIE" rel="nofollow"><span class="facet-item__value">Ireland</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="location-it" data-drupal-facet-item-value="IT" href="/athletes/all?filters%5B0%5D=location%3AIT" rel="nofollow"><span class="facet-item__value">Italy</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="35" data-drupal-facet-item-id="location-jp" data-drupal-facet-item-value="JP" href="/athletes/all?filters%5B0%5D=location%3AJP" rel="nofollow"><span class="facet-item__value">Japan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-jo" data-drupal-facet-item-value="JO" href="/athletes/all?filters%5B0%5D=location%3AJO" rel="nofollow"><span class="facet-item__value">Jordan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="4" data-drupal-facet-item-id="location-kz" data-drupal-facet-item-value="KZ" href="/athletes/all?filters%5B0%5D=location%3AKZ" rel="nofollow"><span class="facet-item__value">Kazakhstan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-kg" data-drupal-facet-item-value="KG" href="/athletes/all?filters%5B0%5D=location%3AKG" rel="nofollow"><span class="facet-item__value">Kyrgyzstan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-lt" data-drupal-facet-item-value="LT" href="/athletes/all?filters%5B0%5D=location%3ALT" rel="nofollow"><span class="facet-item__value">Lithuania</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="25" data-drupal-facet-item-id="location-mx" data-drupal-facet-item-value="MX" href="/athletes/all?filters%5B0%5D=location%3AMX" rel="nofollow"><span class="facet-item__value">Mexico</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-md" data-drupal-facet-item-value="MD" href="/athletes/all?filters%5B0%5D=location%3AMD" rel="nofollow"><span class="facet-item__value">Moldova</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-mn" data-drupal-facet-item-value="MN" href="/athletes/all?filters%5B0%5D=location%3AMN" rel="nofollow"><span class="facet-item__value">Mongolia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-ma" data-drupal-facet-item-value="MA" href="/athletes/all?filters%5B0%5D=location%3AMA" rel="nofollow"><span class="facet-item__value">Morocco</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="8" data-drupal-facet-item-id="location-nl" data-drupal-facet-item-value="NL" href="/athletes/all?filters%5B0%5D=location%3ANL" rel="nofollow"><span class="facet-item__value">Netherlands</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="8" data-drupal-facet-item-id="location-nz" data-drupal-facet-item-value="NZ" href="/athletes/all?filters%5B0%5D=location%3ANZ" rel="nofollow"><span class="facet-item__value">New Zealand</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="4" data-drupal-facet-item-id="location-no" data-drupal-facet-item-value="NO" href="/athletes/all?filters%5B0%5D=location%3ANO" rel="nofollow"><span class="facet-item__value">Norway</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-pa" data-drupal-facet-item-value="PA" href="/athletes/all?filters%5B0%5D=location%3APA" rel="nofollow"><span class="facet-item__value">Panama</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-py" data-drupal-facet-item-value="PY" href="/athletes/all?filters%5B0%5D=location%3APY" rel="nofollow"><span class="facet-item__value">Paraguay</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="location-pe" data-drupal-facet-item-value="PE" href="/athletes/all?filters%5B0%5D=location%3APE" rel="nofollow"><span class="facet-item__value">Peru</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="7" data-drupal-facet-item-id="location-ph" data-drupal-facet-item-value="PH" href="/athletes/all?filters%5B0%5D=location%3APH" rel="nofollow"><span class="facet-item__value">Philippines</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="24" data-drupal-facet-item-id="location-pl" data-drupal-facet-item-value="PL" href="/athletes/all?filters%5B0%5D=location%3APL" rel="nofollow"><span class="facet-item__value">Poland</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-pt" data-drupal-facet-item-value="PT" href="/athletes/all?filters%5B0%5D=location%3APT" rel="nofollow"><span class="facet-item__value">Portugal</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-ro" data-drupal-facet-item-value="RO" href="/athletes/all?filters%5B0%5D=location%3ARO" rel="nofollow"><span class="facet-item__value">Romania</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="48" data-drupal-facet-item-id="location-ru" data-drupal-facet-item-value="RU" href="/athletes/all?filters%5B0%5D=location%3ARU" rel="nofollow"><span class="facet-item__value">Russia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="4" data-drupal-facet-item-id="location-rs" data-drupal-facet-item-value="RS" href="/athletes/all?filters%5B0%5D=location%3ARS" rel="nofollow"><span class="facet-item__value">Serbia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-sg" data-drupal-facet-item-value="SG" href="/athletes/all?filters%5B0%5D=location%3ASG" rel="nofollow"><span class="facet-item__value">Singapore</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="2" data-drupal-facet-item-id="location-sk" data-drupal-facet-item-value="SK" href="/athletes/all?filters%5B0%5D=location%3ASK" rel="nofollow"><span class="facet-item__value">Slovakia</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="6" data-drupal-facet-item-id="location-za" data-drupal-facet-item-value="ZA" href="/athletes/all?filters%5B0%5D=location%3AZA" rel="nofollow"><span class="facet-item__value">South Africa</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="17" data-drupal-facet-item-id="location-kr" data-drupal-facet-item-value="KR" href="/athletes/all?filters%5B0%5D=location%3AKR" rel="nofollow"><span class="facet-item__value">South Korea</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="6" data-drupal-facet-item-id="location-es" data-drupal-facet-item-value="ES" href="/athletes/all?filters%5B0%5D=location%3AES" rel="nofollow"><span class="facet-item__value">Spain</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-sr" data-drupal-facet-item-value="SR" href="/athletes/all?filters%5B0%5D=location%3ASR" rel="nofollow"><span class="facet-item__value">Suriname</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="22" data-drupal-facet-item-id="location-se" data-drupal-facet-item-value="SE" href="/athletes/all?filters%5B0%5D=location%3ASE" rel="nofollow"><span class="facet-item__value">Sweden</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="3" data-drupal-facet-item-id="location-ch" data-drupal-facet-item-value="CH" href="/athletes/all?filters%5B0%5D=location%3ACH" rel="nofollow"><span class="facet-item__value">Switzerland</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-tw" data-drupal-facet-item-value="TW" href="/athletes/all?filters%5B0%5D=location%3ATW" rel="nofollow"><span class="facet-item__value">Taiwan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="5" data-drupal-facet-item-id="location-th" data-drupal-facet-item-value="TH" href="/athletes/all?filters%5B0%5D=location%3ATH" rel="nofollow"><span class="facet-item__value">Thailand</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-tr" data-drupal-facet-item-value="TR" href="/athletes/all?filters%5B0%5D=location%3ATR" rel="nofollow"><span class="facet-item__value">Turkey</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="7" data-drupal-facet-item-id="location-ua" data-drupal-facet-item-value="UA" href="/athletes/all?filters%5B0%5D=location%3AUA" rel="nofollow"><span class="facet-item__value">Ukraine</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-ae" data-drupal-facet-item-value="AE" href="/athletes/all?filters%5B0%5D=location%3AAE" rel="nofollow"><span class="facet-item__value">United Arab Emirates</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="75" data-drupal-facet-item-id="location-gb" data-drupal-facet-item-value="GB" href="/athletes/all?filters%5B0%5D=location%3AGB" rel="nofollow"><span class="facet-item__value">United Kingdom</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1116" data-drupal-facet-item-id="location-us" data-drupal-facet-item-value="US" href="/athletes/all?filters%5B0%5D=location%3AUS" rel="nofollow"><span class="facet-item__value">United States</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-uy" data-drupal-facet-item-value="UY" href="/athletes/all?filters%5B0%5D=location%3AUY" rel="nofollow"><span class="facet-item__value">Uruguay</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-uz" data-drupal-facet-item-value="UZ" href="/athletes/all?filters%5B0%5D=location%3AUZ" rel="nofollow"><span class="facet-item__value">Uzbekistan</span>
+</a></li><li class="facet-item"><a data-drupal-facet-item-count="1" data-drupal-facet-item-id="location-ve" data-drupal-facet-item-value="VE" href="/athletes/all?filters%5B0%5D=location%3AVE" rel="nofollow"><span class="facet-item__value">Venezuela</span>
+</a></li></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="c-facets-abutton">
+<a class="e-button--small"><span class="e-button__text">
+    
+    Apply
+  </span></a>
+</div>
+</div> </aside>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-page__footer">
+<footer class="c-site-footer" role="contentinfo">
+<div class="c-site-footer__main">
+<a class="c-site-footer__logo" href="/">
+<svg>
+<use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</a>
+<div id="block-ufc-localization">
+<div class="ufc-block-localization__title e-t6">
+<div class="block-ufc-localization-title">UFC.COM - WORLD</div>
+<svg>
+<use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#triangle-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</div>
+<div aria-hidden="true" class="ufc-block-localization__links">
+<ul class="links"><li class="pt-br"><a href="https://www.ufc.com.br">Brazil</a></li><li class="zh-hans"><a href="http://ufc.cn">China</a></li><li class="fr"><a href="https://www.ufc.com/language/switch/fr">France</a></li><li class="ja"><a href="http://jp.ufc.com">Japan</a></li><li class="ko"><a href="https://kr.ufc.com">Korea</a></li><li class="es"><a href="https://www.ufcespanol.com">Latin America</a></li><li class="ru"><a href="https://ufc.ru">Russia</a></li><li class="es-us"><a href="https://us.ufcespanol.com">USA Espanol</a></li></ul>
+</div>
+</div>
+<nav aria-labelledby="block-footer-menu" class="c-menu-footer" id="block-footer" role="navigation">
+<h2 class="u-visually--hidden" id="block-footer-menu">Footer</h2>
+<ul class="c-menu-footer__menu--level-1">
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/7258" href="/about" target="_self">UFC</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/7260" href="/about/sport" target="_self">The Sport</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/7259" href="/about/community" target="_self">UFC Foundation</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://ufc.com/careers" target="_self">Careers</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="http://www.ufcstore.com/?ecid=PRF-SM-100419&amp;pa=ufc.com_footer-shop-link_03-06-13" target="_blank">Store</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" href="https://www.ufc.com/connect">Social Media</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://facebook.com/ufc">Facebook</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.instagram.com/ufc/">Instagram</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.tiktok.com/@ufc">TikTok</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.twitch.tv/ufc">Twitch</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://twitter.com/ufc">Twitter</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.youtube.com/ufc">YouTube</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/90551" href="/faq" target="_self">Help</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/90552" href="/faq-ufctv-ufcfightpass" target="_self">Fight Pass FAQ</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/90730" href="/devices" target="_self">Devices</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://access.ufc.com/media_users/sign_in" target="_self">Press Credentials</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/524" href="/terms" target="_self">Legal</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/524" href="/terms" target="_self">Terms</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/525" href="/privacy-policy" target="_self">Privacy Policy</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.networkadvertising.org/choices/   " target="_self">Ad Choices</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="c-site-footer__copyright">
+<div class="block block-ufc-configuration block-copyright-block" id="block-copyrightblock">
+  
+    
+      Copyright © 2001-2022 UFC All Rights Reserved
+  </div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</div>
+<script src="/sites/default/files/js/js_RysXvThwk4fxRUw4_L26vXoo0qD2r1lZKL5Bi8ITSlc.js"></script>
+<script async="" src="https://static.addtoany.com/menu/page.js"></script>
+<script src="/sites/default/files/js/js_9iAq255c5Rhxl96GV3KzZkZ98qrjZ8PN1n_azr5NcbY.js"></script>
+<script src="//unpkg.com/aos@next/dist/aos.js"></script>
+<script src="/sites/default/files/js/js_T3stddKlofpvAwozY2KhPXV23XK-kkEYv9sXfOkvab4.js"></script>
+<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script src="//www.youtube.com/iframe_api"></script>
+<script src="/sites/default/files/js/js_jbPDwZDTBY1ApzFPS8L9QT1WjNimVCs9gL_jGB2Ystk.js"></script>
+<script src="/modules/custom/ufc_overlay/ufc_overlay.js?v=9.3.3"></script>
+<script src="/sites/default/files/js/js_lmIoWEngCxJprt4ZD-C3w9q1oSi8BLabRkBY1CXS8wk.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3cad7d7fc7","applicationID":"190390077","transactionName":"NgZVbUYDCEdSVEdeWA9MdExHFglZHFtDDVYVC1tcQAcV","queueTime":0,"applicationTime":224,"atts":"GkFCGw4ZGxgRVhENTBwe","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

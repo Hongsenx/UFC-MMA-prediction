@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"3cad7d7fc7",applicationID:"190390077"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-18220598-10", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<link href="https://www.ufc.com/athlete/jiri-prochazka" rel="canonical"/>
+<meta content="Jiří Procházka is a Czech professional mixed martial artist and the UFC light heavyweight champion. Get the latest UFC breaking news, fight night results, MMA records and stats, highlights, photos, videos and more." name="description"/>
+<meta content="Jiří Procházka | UFC" property="og:title"/>
+<meta content="Jiří Procházka is a Czech professional mixed martial artist and the UFC light heavyweight champion. Get the latest UFC breaking news, fight night results, MMA records and stats, highlights, photos, videos and more." property="og:description"/>
+<meta content="https://dmxg5wxfqgb4u.cloudfront.net/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png" property="og:image"/>
+<meta content="2020-01-28T12:42:19-0500" property="article:published_time"/>
+<meta content="2022-07-26T18:15:57-0400" property="article:modified_time"/>
+<meta content="Jiří Procházka is a Czech professional mixed martial artist and the UFC light heavyweight champion. Get the latest UFC breaking news, fight night results, MMA records and stats, highlights, photos, videos and more." name="twitter:description"/>
+<meta content="Jiří Procházka | UFC" name="twitter:title"/>
+<meta content="https://dmxg5wxfqgb4u.cloudfront.net/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png" name="twitter:image"/>
+<meta content="Drupal 9 (https://www.drupal.org)" name="Generator"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/sites/default/files/ufc_logo.png" rel="icon" type="image/png"/>
+<link href="https://www.ufc.com/athlete/jiri-prochazka" hreflang="en" rel="alternate"/>
+<link href="https://www.ufc.com/athlete/jiri-prochazka" hreflang="pt-br" rel="alternate"/>
+<link href="https://www.ufc.com/athlete/dzhiri-prokhazka" hreflang="ru" rel="alternate"/>
+<script defer="" src="/sites/default/files/google_tag/primary/google_tag.script.js?rhm6a2"></script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};a2a_config.icon_color = "transparent,black";</script>
+<title>Jiří Procházka | UFC</title>
+<script type="text/javascript">
+      // https://github.com/js-cookie/js-cookie
+      // @todo: need use new version.
+      !function(e){var n=!1;if("function"==typeof define&&define.amd&&(define(e),n=!0),"object"==typeof exports&&(module.exports=e(),n=!0),!n){var o=window.Cookies,t=window.Cookies=e();t.noConflict=function(){return window.Cookies=o,t}}}(function(){function e(){for(var e=0,n={};e<arguments.length;e++){var o=arguments[e];for(var t in o)n[t]=o[t]}return n}return function n(o){function t(n,r,i){var c;if("undefined"!=typeof document){if(arguments.length>1){if("number"==typeof(i=e({path:"/"},t.defaults,i)).expires){var a=new Date;a.setMilliseconds(a.getMilliseconds()+864e5*i.expires),i.expires=a}i.expires=i.expires?i.expires.toUTCString():"";try{c=JSON.stringify(r),/^[\{\[]/.test(c)&&(r=c)}catch(e){}r=o.write?o.write(r,n):encodeURIComponent(String(r)).replace(/%(23|24|26|2B|3A|3C|3E|3D|2F|3F|40|5B|5D|5E|60|7B|7D|7C)/g,decodeURIComponent),n=(n=(n=encodeURIComponent(String(n))).replace(/%(23|24|26|2B|5E|60|7C)/g,decodeURIComponent)).replace(/[\(\)]/g,escape);var s="";for(var f in i)i[f]&&(s+="; "+f,!0!==i[f]&&(s+="="+i[f]));return document.cookie=n+"="+r+s}n||(c={});for(var p=document.cookie?document.cookie.split("; "):[],d=/(%[0-9A-Z]{2})+/g,u=0;u<p.length;u++){var l=p[u].split("="),C=l.slice(1).join("=");this.json||'"'!==C.charAt(0)||(C=C.slice(1,-1));try{var g=l[0].replace(d,decodeURIComponent);if(C=o.read?o.read(C,g):o(C,g)||C.replace(d,decodeURIComponent),this.json)try{C=JSON.parse(C)}catch(e){}if(n===g){c=C;break}n||(c[g]=C)}catch(e){}}return c}}return t.set=t,t.get=function(e){return t.call(t,e)},t.getJSON=function(){return t.apply({json:!0},[].slice.call(arguments))},t.defaults={},t.remove=function(n,o){t(n,"",e(o,{expires:-1}))},t.withConverter=n,t}(function(){})});
+
+      /**
+       * Promise: polyfill https://github.com/taylorhakes/promise-polyfill
+       */
+      !function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):n()}(0,function(){"use strict";function e(e){var n=this.constructor;return this.then(function(t){return n.resolve(e()).then(function(){return t})},function(t){return n.resolve(e()).then(function(){return n.reject(t)})})}function n(){}function t(e){if(!(this instanceof t))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],u(e,this)}function o(e,n){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,t._immediateFn(function(){var t=1===e._state?n.onFulfilled:n.onRejected;if(null!==t){var o;try{o=t(e._value)}catch(f){return void i(n.promise,f)}r(n.promise,o)}else(1===e._state?r:i)(n.promise,e._value)})):e._deferreds.push(n)}function r(e,n){try{if(n===e)throw new TypeError("A promise cannot be resolved with itself.");if(n&&("object"==typeof n||"function"==typeof n)){var o=n.then;if(n instanceof t)return e._state=3,e._value=n,void f(e);if("function"==typeof o)return void u(function(e,n){return function(){e.apply(n,arguments)}}(o,n),e)}e._state=1,e._value=n,f(e)}catch(r){i(e,r)}}function i(e,n){e._state=2,e._value=n,f(e)}function f(e){2===e._state&&0===e._deferreds.length&&t._immediateFn(function(){e._handled||t._unhandledRejectionFn(e._value)});for(var n=0,r=e._deferreds.length;r>n;n++)o(e,e._deferreds[n]);e._deferreds=null}function u(e,n){var t=!1;try{e(function(e){t||(t=!0,r(n,e))},function(e){t||(t=!0,i(n,e))})}catch(o){if(t)return;t=!0,i(n,o)}}var c=setTimeout;t.prototype["catch"]=function(e){return this.then(null,e)},t.prototype.then=function(e,t){var r=new this.constructor(n);return o(this,new function(e,n,t){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof n?n:null,this.promise=t}(e,t,r)),r},t.prototype["finally"]=e,t.all=function(e){return new t(function(n,t){function o(e,f){try{if(f&&("object"==typeof f||"function"==typeof f)){var u=f.then;if("function"==typeof u)return void u.call(f,function(n){o(e,n)},t)}r[e]=f,0==--i&&n(r)}catch(c){t(c)}}if(!e||"undefined"==typeof e.length)throw new TypeError("Promise.all accepts an array");var r=Array.prototype.slice.call(e);if(0===r.length)return n([]);for(var i=r.length,f=0;r.length>f;f++)o(f,r[f])})},t.resolve=function(e){return e&&"object"==typeof e&&e.constructor===t?e:new t(function(n){n(e)})},t.reject=function(e){return new t(function(n,t){t(e)})},t.race=function(e){return new t(function(n,t){for(var o=0,r=e.length;r>o;o++)e[o].then(n,t)})},t._immediateFn="function"==typeof setImmediate&&function(e){setImmediate(e)}||function(e){c(e,0)},t._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};var l=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)return global;throw Error("unable to locate global object")}();"Promise"in l?l.Promise.prototype["finally"]||(l.Promise.prototype["finally"]=e):l.Promise=t});
+
+      /**
+       * Github Fetch Poly
+       * https://github.com/github/fetch
+       *
+       * Minifed of fetch.umd.js at releases section https://github.com/github/fetch/releases
+       */
+      !function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"function"==typeof define&&define.amd?define(["exports"],e):e(t.WHATWGFetch={})}(this,function(t){"use strict";var e={searchParams:"URLSearchParams"in self,iterable:"Symbol"in self&&"iterator"in Symbol,blob:"FileReader"in self&&"Blob"in self&&function(){try{return new Blob,!0}catch(t){return!1}}(),formData:"FormData"in self,arrayBuffer:"ArrayBuffer"in self};if(e.arrayBuffer)var r=["[object Int8Array]","[object Uint8Array]","[object Uint8ClampedArray]","[object Int16Array]","[object Uint16Array]","[object Int32Array]","[object Uint32Array]","[object Float32Array]","[object Float64Array]"],o=ArrayBuffer.isView||function(t){return t&&r.indexOf(Object.prototype.toString.call(t))>-1};function n(t){if("string"!=typeof t&&(t=String(t)),/[^a-z0-9\-#$%&'*+.^_`|~]/i.test(t))throw new TypeError("Invalid character in header field name");return t.toLowerCase()}function i(t){return"string"!=typeof t&&(t=String(t)),t}function s(t){var r={next:function(){var e=t.shift();return{done:void 0===e,value:e}}};return e.iterable&&(r[Symbol.iterator]=function(){return r}),r}function a(t){this.map={},t instanceof a?t.forEach(function(t,e){this.append(e,t)},this):Array.isArray(t)?t.forEach(function(t){this.append(t[0],t[1])},this):t&&Object.getOwnPropertyNames(t).forEach(function(e){this.append(e,t[e])},this)}function h(t){if(t.bodyUsed)return Promise.reject(new TypeError("Already read"));t.bodyUsed=!0}function f(t){return new Promise(function(e,r){t.onload=function(){e(t.result)},t.onerror=function(){r(t.error)}})}function u(t){var e=new FileReader,r=f(e);return e.readAsArrayBuffer(t),r}function d(t){if(t.slice)return t.slice(0);var e=new Uint8Array(t.byteLength);return e.set(new Uint8Array(t)),e.buffer}function c(){return this.bodyUsed=!1,this._initBody=function(t){var r;this._bodyInit=t,t?"string"==typeof t?this._bodyText=t:e.blob&&Blob.prototype.isPrototypeOf(t)?this._bodyBlob=t:e.formData&&FormData.prototype.isPrototypeOf(t)?this._bodyFormData=t:e.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)?this._bodyText=t.toString():e.arrayBuffer&&e.blob&&((r=t)&&DataView.prototype.isPrototypeOf(r))?(this._bodyArrayBuffer=d(t.buffer),this._bodyInit=new Blob([this._bodyArrayBuffer])):e.arrayBuffer&&(ArrayBuffer.prototype.isPrototypeOf(t)||o(t))?this._bodyArrayBuffer=d(t):this._bodyText=t=Object.prototype.toString.call(t):this._bodyText="",this.headers.get("content-type")||("string"==typeof t?this.headers.set("content-type","text/plain;charset=UTF-8"):this._bodyBlob&&this._bodyBlob.type?this.headers.set("content-type",this._bodyBlob.type):e.searchParams&&URLSearchParams.prototype.isPrototypeOf(t)&&this.headers.set("content-type","application/x-www-form-urlencoded;charset=UTF-8"))},e.blob&&(this.blob=function(){var t=h(this);if(t)return t;if(this._bodyBlob)return Promise.resolve(this._bodyBlob);if(this._bodyArrayBuffer)return Promise.resolve(new Blob([this._bodyArrayBuffer]));if(this._bodyFormData)throw new Error("could not read FormData body as blob");return Promise.resolve(new Blob([this._bodyText]))},this.arrayBuffer=function(){return this._bodyArrayBuffer?h(this)||Promise.resolve(this._bodyArrayBuffer):this.blob().then(u)}),this.text=function(){var t,e,r,o=h(this);if(o)return o;if(this._bodyBlob)return t=this._bodyBlob,e=new FileReader,r=f(e),e.readAsText(t),r;if(this._bodyArrayBuffer)return Promise.resolve(function(t){for(var e=new Uint8Array(t),r=new Array(e.length),o=0;o<e.length;o++)r[o]=String.fromCharCode(e[o]);return r.join("")}(this._bodyArrayBuffer));if(this._bodyFormData)throw new Error("could not read FormData body as text");return Promise.resolve(this._bodyText)},e.formData&&(this.formData=function(){return this.text().then(p)}),this.json=function(){return this.text().then(JSON.parse)},this}a.prototype.append=function(t,e){t=n(t),e=i(e);var r=this.map[t];this.map[t]=r?r+", "+e:e},a.prototype.delete=function(t){delete this.map[n(t)]},a.prototype.get=function(t){return t=n(t),this.has(t)?this.map[t]:null},a.prototype.has=function(t){return this.map.hasOwnProperty(n(t))},a.prototype.set=function(t,e){this.map[n(t)]=i(e)},a.prototype.forEach=function(t,e){for(var r in this.map)this.map.hasOwnProperty(r)&&t.call(e,this.map[r],r,this)},a.prototype.keys=function(){var t=[];return this.forEach(function(e,r){t.push(r)}),s(t)},a.prototype.values=function(){var t=[];return this.forEach(function(e){t.push(e)}),s(t)},a.prototype.entries=function(){var t=[];return this.forEach(function(e,r){t.push([r,e])}),s(t)},e.iterable&&(a.prototype[Symbol.iterator]=a.prototype.entries);var l=["DELETE","GET","HEAD","OPTIONS","POST","PUT"];function y(t,e){var r,o,n=(e=e||{}).body;if(t instanceof y){if(t.bodyUsed)throw new TypeError("Already read");this.url=t.url,this.credentials=t.credentials,e.headers||(this.headers=new a(t.headers)),this.method=t.method,this.mode=t.mode,this.signal=t.signal,n||null==t._bodyInit||(n=t._bodyInit,t.bodyUsed=!0)}else this.url=String(t);if(this.credentials=e.credentials||this.credentials||"same-origin",!e.headers&&this.headers||(this.headers=new a(e.headers)),this.method=(r=e.method||this.method||"GET",o=r.toUpperCase(),l.indexOf(o)>-1?o:r),this.mode=e.mode||this.mode||null,this.signal=e.signal||this.signal,this.referrer=null,("GET"===this.method||"HEAD"===this.method)&&n)throw new TypeError("Body not allowed for GET or HEAD requests");this._initBody(n)}function p(t){var e=new FormData;return t.trim().split("&").forEach(function(t){if(t){var r=t.split("="),o=r.shift().replace(/\+/g," "),n=r.join("=").replace(/\+/g," ");e.append(decodeURIComponent(o),decodeURIComponent(n))}}),e}function b(t,e){e||(e={}),this.type="default",this.status=void 0===e.status?200:e.status,this.ok=this.status>=200&&this.status<300,this.statusText="statusText"in e?e.statusText:"OK",this.headers=new a(e.headers),this.url=e.url||"",this._initBody(t)}y.prototype.clone=function(){return new y(this,{body:this._bodyInit})},c.call(y.prototype),c.call(b.prototype),b.prototype.clone=function(){return new b(this._bodyInit,{status:this.status,statusText:this.statusText,headers:new a(this.headers),url:this.url})},b.error=function(){var t=new b(null,{status:0,statusText:""});return t.type="error",t};var m=[301,302,303,307,308];b.redirect=function(t,e){if(-1===m.indexOf(e))throw new RangeError("Invalid status code");return new b(null,{status:e,headers:{location:t}})},t.DOMException=self.DOMException;try{new t.DOMException}catch(e){t.DOMException=function(t,e){this.message=t,this.name=e;var r=Error(t);this.stack=r.stack},t.DOMException.prototype=Object.create(Error.prototype),t.DOMException.prototype.constructor=t.DOMException}function w(r,o){return new Promise(function(n,i){var s=new y(r,o);if(s.signal&&s.signal.aborted)return i(new t.DOMException("Aborted","AbortError"));var h=new XMLHttpRequest;function f(){h.abort()}h.onload=function(){var t,e,r={status:h.status,statusText:h.statusText,headers:(t=h.getAllResponseHeaders()||"",e=new a,t.replace(/\r?\n[\t ]+/g," ").split(/\r?\n/).forEach(function(t){var r=t.split(":"),o=r.shift().trim();if(o){var n=r.join(":").trim();e.append(o,n)}}),e)};r.url="responseURL"in h?h.responseURL:r.headers.get("X-Request-URL");var o="response"in h?h.response:h.responseText;n(new b(o,r))},h.onerror=function(){i(new TypeError("Network request failed"))},h.ontimeout=function(){i(new TypeError("Network request failed"))},h.onabort=function(){i(new t.DOMException("Aborted","AbortError"))},h.open(s.method,s.url,!0),"include"===s.credentials?h.withCredentials=!0:"omit"===s.credentials&&(h.withCredentials=!1),"responseType"in h&&e.blob&&(h.responseType="blob"),s.headers.forEach(function(t,e){h.setRequestHeader(e,t)}),s.signal&&(s.signal.addEventListener("abort",f),h.onreadystatechange=function(){4===h.readyState&&s.signal.removeEventListener("abort",f)}),h.send(void 0===s._bodyInit?null:s._bodyInit)})}w.polyfill=!0,self.fetch||(self.fetch=w,self.Headers=a,self.Request=y,self.Response=b),t.Headers=a,t.Request=y,t.Response=b,t.fetch=w,Object.defineProperty(t,"__esModule",{value:!0})});
+
+      function checkResponseStatus(response) {
+        if (response.status >= 200 && response.status < 300) {
+          return response
+        }
+        else {
+          let error = new Error(response.statusText);
+          error.response = response;
+          throw error
+        }
+      }
+
+      function checkCookies() {
+        if (!Cookies.get('UFCCookieTest')) {
+          Cookies.set('UFCCookieTest', 1)
+        }
+        return Cookies.get('UFCCookieTest');
+      }
+
+      function hasStyxkeyRegion() {
+        return Cookies.get('STYXKEY_region');
+      }
+
+      function tryLocale() {
+        return !Cookies.get('UFC_nolocale');
+      }
+
+      function parseJSON(response) {
+        return response.json()
+      }
+
+      if (checkCookies() && !hasStyxkeyRegion() && tryLocale()) {
+        // @todo should we really stop?, stopping because it improves end user experince
+        window.stop();
+        fetch('/ufc/setregion?_format=json', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+          .then(checkResponseStatus)
+          .then(parseJSON)
+          .then(function (json) {
+
+            // Write styxkey region
+            if (json.value && !json.redirect) {
+              Cookies.set('STYXKEY_region', json.value, {expires: 1})
+            }
+            // If can redirect and json.redirect exist (basically has a domain name), go to the new domain name
+            if (json.redirect) {
+              var path = window.location.pathname;
+
+              window.location.href = json.redirect + path;
+              return true;
+            }
+
+            // Check now if cookie is set, if not fallback
+            if (!hasStyxkeyRegion()) {
+              let error = new Error(response.statusText);
+              error.response = response;
+              throw error
+            }
+
+            // Now just reload the page to get the new localized verion of the site/page
+            location.reload();
+          }).catch(function (ex) {
+          // Mark this client not try localization for the next 5 mins
+          Cookies.set('UFC_nolocale', 1, {expires: (1 / 24 / 60) * 5});
+          console.log('something went wrong', ex);
+          location.reload();
+        });
+      }
+    </script>
+<link href="/sites/default/files/css/css_eBcV6PN2C2IWwPfaL3Brt_GfZ-SgB_5avE4Yg5QAy_4.css" media="all" rel="stylesheet"/>
+<link href="/modules/custom/ufc_overlay/ufc_overlay.css?rhm6a2" media="all" rel="stylesheet"/>
+<link href="https://assets.sitescdn.net/answers-search-bar/v1.2/answers.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_ShBHOZZ8Sq4pDK0aaKJisxNt81KXBgXO7RMD-18FS-I.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_NLeLMu-yhOsGxOAeiCOEZI9FqlOZFo6ozuvW1DQNpi0.css" media="all" rel="stylesheet"/>
+<link href="//unpkg.com/aos@next/dist/aos.css" media="all" rel="stylesheet"/>
+<link href="/sites/default/files/css/css_YNDfQRN5FiEtdnIphPU6E79Y5tynGtAwVDvf5XntK-s.css" media="all" rel="stylesheet"/>
+<script data-drupal-selector="drupal-settings-json" type="application/json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/99884","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en-zxx"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,classy\/base,classy\/messages,core\/normalize,core\/picturefill,google_analytics\/google_analytics,layout_discovery\/onecol,poll\/drupal.poll-links,system\/base,ufc\/global-css,ufc\/global-js,ufc_localization\/region,ufc_overlay\/ufc_overlay,ufc_yext\/search_bar,views\/views.ajax,views\/views.module,views_infinite_scroll\/views-infinite-scroll","theme":"ufc","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"ufc_yext":{"api_key":"850a88aeb3c29599ce2db46832aa229f","experience_key":"answers-en","experience_version":"PRODUCTION","account_id":"3668711","answers_url":"https:\/\/answers-embed-client.ufc.com.pagescdn.com","locale":"en","redirect_url":"\/search","search_placeholder":"Search..."},"breakpoints":{"ufc.images.mobile":"","ufc.images.tablet":"(min-width: 700px)","ufc.images.desktop":"(min-width: 1024px)","ufc.images.extra-large":"(min-width: 1440px)"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:2f1a58d7dd7a4adf37711851a259bc6d8b5765cc3dce0b1e8f23dad87015691d":{"view_name":"athlete_results","view_display_id":"entity_view_1","view_args":"99884\/99884","view_path":"\/node\/99884","view_base_path":null,"view_dom_id":"2f1a58d7dd7a4adf37711851a259bc6d8b5765cc3dce0b1e8f23dad87015691d","pager_element":0},"views_dom_id:4ec6ed52649a4338692e8a617e8e77588f326c804048ead5870b67daefd115af":{"view_name":"athlete_results","view_display_id":"last_fight","view_args":"99884\/99884","view_path":"\/node\/99884","view_base_path":null,"view_dom_id":"4ec6ed52649a4338692e8a617e8e77588f326c804048ead5870b67daefd115af","pager_element":0}}},"user":{"uid":0,"permissionsHash":"2e8e8cb6a20338cb7ac4dc7ed2b5a62ff74f3708ada6b59e6eaab6c1260eae72"}}</script>
+<script src="/sites/default/files/js/js_1fdWmLo2sJ0Ukek9P5fZJQhtBb7BC7PY0U7mkOUzbE0.js"></script>
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.2/answerstemplates.compiled.min.js"></script>
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.2/answers.min.js"></script>
+</head>
+<body class="fontyourface path-node page-node-type-athlete">
+<a class="u-visually--hidden focusable" href="#main-content">
+      Skip to main content
+    </a>
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WFBHZX5" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+<div class="l-page">
+<span class="l-page__header-pin" id="header-pin"></span>
+<div class="l-page__header" id="header-wrapper">
+<header class="c-site-header" data-header-state="animate">
+<div class="c-site-header__content">
+<div class="c-site-header__logo">
+<a class="e-logo" href="/">
+<span class="e-logo__icon"><svg aria-hidden="true" class="e-logo__svg"><title>UFC</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</a>
+</div>
+<div class="c-site-header__menu-control">
+<button aria-expanded="false" class="c-site-header__button--menu" data-mobile-menu-component="toggle">
+<span class="c-site-header__button-text">Menu</span>
+<span class="c-site-header__icon--toggle">
+<svg class="e-svg"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</button>
+</div>
+<div class="c-site-header__menu-panel" data-mobile-menu-component="panel" data-mobile-menu-state="is-hidden">
+<nav aria-labelledby="main-menu-title" class="c-menu-main" id="main-menu" role="navigation">
+<h2 class="u-visually--hidden" id="main-menu-title">Main navigation</h2>
+<ul class="c-menu-main__menu--level-1" data-main-menu="smart-menu">
+<li class="c-menu-main__item--left">
+<a class="events c-menu-main__button--level-1" data-drupal-link-system-path="events" href="/events">Events</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="events" href="/events#events-list-upcoming">Upcoming</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="events" href="/events#events-list-past">Past</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="tickets" href="/tickets" target="_self">Tickets</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufcvip.com/?utm_source=ufc.com&amp;utm_medium=referral&amp;utm_campaign=vip_packages-main_menu_events_dropdown">VIP Experiences</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/groupsales">Group Sales</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--left">
+<a class="c-menu-main__button--level-1" data-drupal-link-system-path="rankings" href="/rankings" target="_self">Rankings</a>
+</li>
+<li class="c-menu-main__item--left">
+<a class="athletes c-menu-main__button--level-1" data-drupal-link-system-path="athletes" href="/athletes" target="_self">Athletes</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="athletes/all" href="/athletes/all" target="_self">All Athletes</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="http://statleaders.ufc.com/" target="_self">Record Book</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--left">
+<a class="trending c-menu-main__button--level-1" data-drupal-link-system-path="trending/all" href="/trending/all">News</a>
+</li>
+<li class="c-menu-main__item--home">
+<a class="home c-menu-main__button--home" data-drupal-link-system-path="home" href="/home">
+<div class="e-logo">
+<span class="e-logo__icon"><svg aria-hidden="true" class="e-logo__svg"><title>UFC</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+</span>
+</div>
+</a>
+</li>
+<li class="c-menu-main__item--right is-pushed">
+<a class="c-menu-main__button--level-1" data-drupal-link-system-path="watch/library" href="/watch/library" target="_self">Videos</a>
+</li>
+<li class="c-menu-main__item--right">
+<a class="connect c-menu-main__button--level-1" href="https://www.ufc.com/newsletter">Connect</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/newsletter" target="_self">Newsletter</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/performance-institute/" target="_self">UFC Performance Institute</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufcapex.com">UFC Apex</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://link.ufcultimatesound.com/website-ufc" target="_self">UFC Ultimate Sound</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="http://www.ufcgym.com" target="_blank">Find a Gym</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://go.ea.com/ufcmobile2" target="_self">EA SPORTS™ UFC® Mobile 2</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ea.com/games/ufc/ufc-4" target="_blank">EA Sports UFC 4</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://sportsbook.draftkings.com/leagues/mma/2162" target="_self">Betting Odds</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--right">
+<a class="watch c-menu-main__button--level-1" data-drupal-link-system-path="watch" href="/watch" target="_self">Watch</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="watch" href="/watch" target="_blank">How to Watch</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufc.com/bars" target="_self">Find a Bar</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://www.ufcfightpass.com" target="_blank">UFC Fight Pass</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-main__item--right">
+<a class="c-menu-main__button--level-1" href="https://ufcstore.com" target="_blank">SHOP</a>
+<ul aria-expanded="false" class="c-menu-main__menu--level-2 mega-menu">
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufcstore.com">UFC STORE</a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" href="https://ufccollectibles.com/?utm_source=referral&amp;utm_medium=ufc%20website%20navigation%20link&amp;utm_campaign=partner-referral">UFC COLLECTIBLES </a>
+</li>
+<li class="c-menu-main__item--below">
+<a class="c-menu-main__button--level-2" data-drupal-link-system-path="node/116829" href="/nfts">NFT</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="c-site-header__search-control">
+<button aria-expanded="false" class="c-site-header__button--search" data-search-btn="">
+<span class="c-site-header__icon--search e-icon--xsmall"><svg class="e-icon__svg search"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg><svg class="e-svg close"><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+</button>
+</div>
+<div class="c-site-header__search-panel" data-search-panel="" data-search-state="is-hidden">
+<div class="search-form"></div>
+</div>
+</div>
+</header>
+</div>
+<div class="l-page__pre-content">
+<div class="hidden" data-drupal-messages-fallback=""></div>
+</div>
+<div class="l-page__utilities">
+</div>
+<main class="l-page__main">
+<a id="main-content" tabindex="-1"></a>
+<div class="l-page__content">
+<div class="block block-system block-system-main-block" id="block-mainpagecontent">
+<div class="l-main">
+<div>
+<div class="l-main__content">
+<div class="hero-profile-wrap">
+<div class="l-container">
+<div class="hero-profile">
+<div class="hero-profile__info">
+<div class="hero-profile__tags">
+<p class="hero-profile__tag">        Light Heavyweight Champion
+  </p>
+<p class="hero-profile__tag">#10 PFP</p>
+<p class="hero-profile__tag">Active</p>
+<p class="hero-profile__tag">Title Holder</p>
+</div>
+<h1 class="hero-profile__name">Jiří Procházka </h1>
+<div class="hero-profile__division">
+<p class="hero-profile__division-title">Light Heavyweight Division</p>
+<p class="hero-profile__division-body">29-3-1 (W-L-D)</p>
+</div>
+<div class="hero-profile__stats">
+<div class="hero-profile__stat">
+<p class="hero-profile__stat-numb">13</p>
+<p class="hero-profile__stat-text">Fight Win Streak</p>
+</div>
+<div class="hero-profile__stat">
+<p class="hero-profile__stat-numb">25</p>
+<p class="hero-profile__stat-text">Wins by Knockout</p>
+</div>
+<div class="hero-profile__stat">
+<p class="hero-profile__stat-numb">23</p>
+<p class="hero-profile__stat-text">First Round Finishes</p>
+</div>
+</div>
+</div>
+<div class="hero-profile__image-wrap">
+<img alt="Jiří Procházka " class="hero-profile__image" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/athlete_bio_full_body/s3/2022-06/e66264ab-cd89-48bb-a170-1fec589b46a5%252FPROCHAZKA_JIRI_L_BELTCOMP.png?itok=ShoQER3C"/>
+</div>
+<div class="hero-profile__fight">
+<div class="hero-profile__fight__inner">
+<div class="view view-athlete-results view-id-athlete_results view-display-id-last_fight js-view-dom-id-4ec6ed52649a4338692e8a617e8e77588f326c804048ead5870b67daefd115af">
+<div class="view-content">
+<section class="l-listing--stacked">
+<ul class="l-listing__group"><li class="l-listing__item">
+<article class="c-card-event--athlete-fight">
+<div class="c-card-event--athlete-fight__header c-card-event__header--last">
+<p>Last fight</p>
+<div class="c-card-event--athlete-fight__logo">
+<h2 class="u-visually--hidden">UFC 275</h2> <svg aria-hidden="true" class="ufc-title-svg" viewbox="0 0 42 28" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0px">
+<text class="c-card-event--athlete-fight__number" fill="#FAFBFD" font-size="8px" transform="matrix(1 0 0 1 20.8319 27)">275</text>
+<path d="M34.14,9.81c-0.42,1.56-0.79,2.9-1.22,4.47
+            c-0.07,0.27-0.26,0.68-0.21,0.93c0.13,0.6,2.08,0.37,2.79,0.37c1.1,0,2.1,0,3.14,0c-0.25,1-0.53,1.98-0.81,2.96
+            c-2.49,0-4.98,0-7.47,0c-1.09-0.1-2.52-0.58-2.37-2c0.05-0.45,0.26-0.95,0.39-1.44c0.67-2.43,1.36-4.91,2.01-7.29
+            c0.29-1.06,0.51-1.96,1.34-2.38c0.53-0.27,1.39-0.35,2.03-0.4c2.47,0,4.95,0,7.42,0C40.91,6.02,40.63,7,40.36,7.99
+            c-1.45,0-2.79,0-4.26,0c-0.51,0-1.08-0.05-1.36,0.14C34.43,8.34,34.25,9.38,34.14,9.81z M15.62,18.6l2.36-8.56h9.83l-0.82,2.98
+            h-5.26l-1.54,5.59H15.62z M29.19,5.02L28.37,8h-9.83l0.82-2.98H29.19z M12.6,5.02h4.52c0,0-3,10.85-3.15,11.43
+            c-0.29,1.13-0.57,2.15-3.3,2.15c-3.29,0-5.2-0.01-6.1,0c-1.12,0.01-2.46-1.04-2.09-2.4L5.56,5.02h4.61c0,0-2.59,9.33-2.64,9.57
+            c-0.05,0.24-0.31,0.91,1.13,0.92c1.04,0.03,1.12-0.26,1.3-0.92C10.39,13.08,12.6,5.02,12.6,5.02z" fill="#FAFBFD"></path>
+<rect fill="#FAFBFD" height="1.5" width="18" x="0.83" y="23.34"></rect>
+</svg>
+</div>
+</div>
+<div class="c-card-event--athlete-fight__fight-container">
+<div class="c-card-event--athlete-fight__matchup-container">
+<div class="c-card-event--athlete-fight__matchup-wrapper">
+<div class="c-card-event--athlete-fight__matchup">
+<div class="c-card-event--athlete-fight__red-image">
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2021-10/68036%252Fprofile-galery%252Fprofile-picture%252FTEIXEIRA_GLOVER_10-30.png?itok=WwIKiBxk" width="256"/>
+</article>
+</div>
+<div class="c-card-event--athlete-fight__blue-image">
+<div class="c-card-event--athlete-fight__plaque win">
+                                      Win
+                                  </div>
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png?itok=v6TIGC9I" width="256"/>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-fight__info">
+<h3 class="c-card-event--athlete-fight__headline">Teixeira <span>vs</span> Prochazka</h3>
+<div class="c-card-event--athlete-fight__date"><time class="datetime" datetime="2022-06-12T02:00:00Z">Jun. 11, 2022</time>
+</div>
+</div>
+<div class="c-card-event--athlete-fight__actions">
+<a class="e-button--arrow-right" href="//ufcfightpass.com" target="1"><span class="e-button__text">
+    
+    Watch Replay
+  </span></a>
+<a class="e-button--arrow-right" href="/event/ufc-275#9768"><span class="e-button__text">
+    
+    Recap
+  </span></a>
+</div>
+</article>
+</li></ul></section>
+</div>
+</div>
+</div>
+<div class="hero-profile__fight__more-wrap">
+<a class="e-button--black" href="#athlete-record"><span class="e-button__text">
+    
+    View Fight History
+  </span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-container athlete_articles">
+<div class="l-container__content">
+<div class="view view-eva view-athlete-articles view-id-athlete_articles view-display-id-entity_view_1 js-view-dom-id-1b8c99ac99230480aa6a756214e8425f132102250c28c052fe162af4325059f3">
+<div class="c-carousel-wrapper c-carousel--multiple">
+<div class="carousel-section-title-wrap carousel-section-title-wrap--multiple">
+<h2 class="c-carousel__title--multiple">UFC Spotlight</h2>
+</div>
+<div class="c-carousel--multiple__content carousel__multiple-items" data-carousel="multiple-items">
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/122506" href="/video/10-things-ufc-champion-jiri-prochazka-cant-live-without-GQ-sports">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061222-jiri-prochazka-champ-athlete-page-hero_GettyImages-1402411390.jpg?itok=oXSKEHvX 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061222-jiri-prochazka-champ-athlete-page-hero_GettyImages-1402411390.jpg?itok=RoEa6MXt 1x" type="image/jpeg"/>
+<img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061222-jiri-prochazka-champ-athlete-page-hero_GettyImages-1402411390.jpg?itok=oXSKEHvX"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            10 Things UFC Champion Jiri Prochazka Can't Live Without
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/121372" href="/video/athlete-qa-ufc-champion-jiri-prochazka-international-fight-week-2022">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402411261.jpg?itok=tbquzgUz 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/GettyImages-1402411261.jpg?itok=sSIj11sb 1x" type="image/jpeg"/>
+<img alt="SINGAPORE, SINGAPORE - JUNE 12: Jiri Prochazka of Czech Republic is interviewed by Daniel Cormier after his victory over Glover Teixeira of Brazil in the UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402411261.jpg?itok=tbquzgUz"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            Athlete Q&amp;A With UFC Champion Jiri Prochazka | International Fight Week 2022
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/120971" href="/video/ufc-275-teixeira-prochazka-fight-motion-watch">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402406910.jpg?itok=MFP58WO3 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/GettyImages-1402406910.jpg?itok=pdXbCuX8 1x" type="image/jpeg"/>
+<img alt="Opponents Glover Teixeira of Brazil and Jiri Prochazka of Czech Republic face off prior to their UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402406910.jpg?itok=MFP58WO3"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            UFC 275 Fight Motion
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" href="/news/where-we-stand-light-heavyweight-division">
+<div class="c-card__media">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061522-lhw-where-we-stand-hero_GettyImages-1402406885.jpg?itok=1vn6wZbW 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061522-lhw-where-we-stand-hero_GettyImages-1402406885.jpg?itok=ST5wMJ5H 1x" type="image/jpeg"/>
+<img alt="SINGAPORE, SINGAPORE - JUNE 12: Jiri Prochazka of Czech Republic prepares to fight Glover Teixeira of Brazil in the UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061522-lhw-where-we-stand-hero_GettyImages-1402406885.jpg?itok=1vn6wZbW"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3" id="n-115070">
+<span class="field field--name-title field--type-string field--label-hidden">Where We Stand: Light Heavyweight Division | June 2022</span>
+</h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" href="/news/ufc-light-heavyweight-champion-jiri-prochazka-hoping-make-difference-with-bjp-foundation-czech-republic">
+<div class="c-card__media">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061322-bjp-foundation-jiri-prochazka_HG-06-11-UFC275-262.jpg?itok=3Cm-50ng 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061322-bjp-foundation-jiri-prochazka_HG-06-11-UFC275-262.jpg?itok=gCQ7UTbg 1x" type="image/jpeg"/>
+<img alt="Jiri Prochazka of the Czech Republic prepares to fight Glover Teixeira of Brazil in a light heavyweight championship bout during the UFC 275 event at the Singapore Indoor Stadium on June 11, 2022 in Singapore. (Photo by Harrison Green/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061322-bjp-foundation-jiri-prochazka_HG-06-11-UFC275-262.jpg?itok=3Cm-50ng"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3" id="n-120894">
+<span class="field field--name-title field--type-string field--label-hidden">Jiří Procházka: Making A Difference With BJP Foundation</span>
+</h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/120892" href="/video/jiri-prochazka-backstage-interview-ufc-275-teixeira-vs-prochazka-champion-singapore">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/jiri-interview_thumb.jpg?itok=To6gJkdi 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/jiri-interview_thumb.jpg?itok=xbUUmZDH 1x" type="image/jpeg"/>
+<img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/jiri-interview_thumb.jpg?itok=To6gJkdi"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            Jiří Procházka Backstage Interview | UFC 275
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" href="/news/scorecard-ufc-275-teixeira-vs-prochazka-shevchenko-jedrzejczyk-weili-matthews-maddalena">
+<div class="c-card__media">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061222-scorecard-hero-HG-06-11-UFC275-262.jpg?itok=U7rsjWr_ 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061222-scorecard-hero-HG-06-11-UFC275-262.jpg?itok=r3zGduD_ 1x" type="image/jpeg"/>
+<img alt="SINGAPORE, SINGAPORE - JUNE 12: Jiri Prochazka of Czech Republic prepares to fight Glover Teixeira of Brazil in the UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. " src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061222-scorecard-hero-HG-06-11-UFC275-262.jpg?itok=U7rsjWr_"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3" id="n-120877">
+<span class="field field--name-title field--type-string field--label-hidden">The Scorecard | UFC 275: Teixeira vs Prochazka</span>
+</h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/120851" href="/video/jiri-prochazka-post-fight-interview-ufc-275">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/lmQ8ABVGqFY5k0C0jtxql6NovXMigNKA-1655017059673.jpeg?itok=QiihH7Kj 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/lmQ8ABVGqFY5k0C0jtxql6NovXMigNKA-1655017059673.jpeg?itok=ohBfsrNm 1x" type="image/jpeg"/>
+<img alt="Light Heavyweight Champion Jiri Prochazka Discusses His Submission Win At UFC 275" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/lmQ8ABVGqFY5k0C0jtxql6NovXMigNKA-1655017059673.jpeg?itok=QiihH7Kj"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            Jiri Prochazka Post-Fight Interview | UFC 275
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" href="/news/ufc-275-teixeira-vs-prochazka-fight-results-highlights-winner-interviews-singapore">
+<div class="c-card__media">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero_1920-1080_5.jpg?itok=Ox8O9zTa 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero_1920-1080_5.jpg?itok=JIu-bhku 1x" type="image/jpeg"/>
+<img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero_1920-1080_5.jpg?itok=Ox8O9zTa"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3" id="n-120800">
+<span class="field field--name-title field--type-string field--label-hidden">UFC 275: Teixeira vs Prochazka Results</span>
+</h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/120791" href="/video/ufc-275-embedded-episode-5-teixeira-prochazka-jedrzejczyk-zhang-santos-shevchenko">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/EMB275_EP05_Thumbnail_Glover-Teixeira-TL.jpg?itok=NVYtgIzh 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/EMB275_EP05_Thumbnail_Glover-Teixeira-TL.jpg?itok=S3zQqLdK 1x" type="image/jpeg"/>
+<img alt="Glover Teixeira on UFC 275 Embedded, 2022" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/EMB275_EP05_Thumbnail_Glover-Teixeira-TL.jpg?itok=NVYtgIzh"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            UFC 275 Embedded: Episode 5
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" data-modal-callback="/ajax/modal/node/120799" href="/video/ufc-275-embedded-episode-6-teixeira-prochazka-jedrzejczyk-zhang-santos-shevchenko">
+<div class="c-card__media">
+<div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402128059.jpg?itok=cAcFV_vb 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/GettyImages-1402128059.jpg?itok=f5fWdzX- 1x" type="image/jpeg"/>
+<img alt="Opponents Glover Teixeira of Brazil and Jiri Prochazka of Czech Republic \fo during the UFC 275 weigh-in at Singapore Indoor Stadium on June 10, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/GettyImages-1402128059.jpg?itok=cAcFV_vb"/>
+</picture>
+</div>
+</div>
+<div class="c-card__icon-b c-card__icon-b--video">
+<svg fill="none" height="58" viewbox="0 0 58 58" width="58" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29" r="28.5" stroke="white"></circle>
+<path d="M19.25 24.489H21.599C22.3917 24.489 22.9862 24.7017 23.3825 25.127C23.7788 25.5523 23.977 26.1758 23.977 26.9975V27.998C23.977 28.8197 23.7788 29.4432 23.3825 29.8685C22.9862 30.2938 22.3917 30.5065 21.599 30.5065H20.845V34.639H19.25V24.489ZM21.599 29.0565C21.86 29.0565 22.0533 28.984 22.179 28.839C22.3143 28.694 22.382 28.4475 22.382 28.0995V26.896C22.382 26.548 22.3143 26.3015 22.179 26.1565C22.0533 26.0115 21.86 25.939 21.599 25.939H20.845V29.0565H21.599Z" fill="white"></path>
+<path d="M24.8433 24.489H26.4383V33.189H29.0628V34.639H24.8433V24.489Z" fill="white"></path>
+<path d="M31.1168 24.489H33.2773L34.9303 34.639H33.3353L33.0453 32.6235V32.6525H31.2328L30.9428 34.639H29.4638L31.1168 24.489ZM32.8568 31.275L32.1463 26.258H32.1173L31.4213 31.275H32.8568Z" fill="white"></path>
+<path d="M36.5031 30.318L34.5746 24.489H36.2711L37.3586 28.2155H37.3876L38.4751 24.489H40.0266L38.0981 30.318V34.639H36.5031V30.318Z" fill="white"></path>
+</svg>
+</div>
+<div class="c-card__icon">
+<svg class="e-icon__svg"><title>Video</title><use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#video" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+<span class="e-p--small"></span>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3">
+            UFC 275 Embedded: Episode 6
+          </h3>
+</div>
+</div>
+</a>
+</div>
+<div class="c-carousel__item">
+<a class="c-card c-card--advance c-card--small" href="/news/how-watch-ufc-275-teixeira-vs-prochazka">
+<div class="c-card__media">
+<div class="field field--name-thumbnail field--type-entity-reference field--label-hidden field__item"> <div class="layout layout--onecol">
+<div class="layout__region layout__region--content">
+<picture>
+<source media="(min-width: 1024px)" srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero.jpg?itok=cOHZJcLh 1x" type="image/jpeg"/>
+<source srcset="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_175x220/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero.jpg?itok=Kyf56uX0 1x" type="image/jpeg"/>
+<img src="https://dmxg5wxfqgb4u.cloudfront.net/styles/card_advance_small_280x356/s3/2022-06/061122-ufc-275-teixeira-vs-prochazka-sg-hero.jpg?itok=cOHZJcLh"/>
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<h3 class="e-t3" id="n-120493">
+<span class="field field--name-title field--type-string field--label-hidden">How to Watch UFC 275: Teixeira vs Prochazka</span>
+</h3>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-container stats-record-wrap">
+<div class="l-container__content">
+<div class="c-carousel-wrapper c-carousel--multiple">
+<div class="l-listing__header stats-records__header carousel-section-title-wrap carousel-section-title-wrap--multiple">
+<h2 class="l-listing__title stats-records__title">Stats &amp; Records</h2>
+</div>
+<div class="c-carousel--multiple__content carousel__multiple-items stats-records-inner-wrap" data-carousel="athlete">
+<div class="stats-records stats-records__container stats-records--one-column">
+<div class="stats-records-inner">
+<div class="athlete-stats">
+<div class="athlete-stats__stat">
+<p class="athlete-stats__text athlete-stats__stat-numb">13</p>
+<p class="athlete-stats__text athlete-stats__stat-text">Fight Win Streak</p>
+</div>
+<div class="athlete-stats__stat">
+<p class="athlete-stats__text athlete-stats__stat-numb">25</p>
+<p class="athlete-stats__text athlete-stats__stat-text">Wins by Knockout</p>
+</div>
+<div class="athlete-stats__stat">
+<p class="athlete-stats__text athlete-stats__stat-numb">23</p>
+<p class="athlete-stats__text athlete-stats__stat-text">First Round Finishes</p>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--two-column">
+<div class="stats-records-inner">
+<div class="tooltip">
+<button aria-describedby="tooltip-1777372776" class="tooltip__button" type="button">
+<svg aria-hidden="true" fill="none" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 7h2V5H9v2Zm1 11c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM9 15h2V9H9v6Z" fill="#D20A0A"></path></svg>
+</button>
+<div class="tooltip__content-wrap tooltip__content-wrap--top-right" id="tooltip-1777372776" role="tooltip"><div class="tooltip__content tooltip__content--top-right">Significant Strikes include all strikes at distance, plus power strikes in the clinch and on the ground.</div></div>
+</div>
+<div class="overlap-athlete-content overlap-athlete-content--horizontal">
+<div class="c-overlap__chart">
+<div class="e-chart-circle__wrapper">
+<svg class="e-chart-circle" height="200" viewbox="-14 -14 128 128" width="200" xmlns="http://www.w3.org/2000/svg">
+<title>Striking accuracy 56%</title>
+<circle class="e-chart-circle--athlete-stat__background" cx="50" cy="50" fill="none" r="50" stroke="#fefefe" stroke-width="26"></circle>
+<circle class="e-chart-circle__circle" cx="50" cy="50" fill="none" r="50" stroke="#d20a0a" stroke-dasharray="314.2, 314.2" stroke-dashoffset="139.63048" stroke-width="26" transform="rotate(-90 50 50)"></circle>
+<text class="e-chart-circle__percent" font-size="30" text-anchor="middle" x="50" y="60">56%</text>
+</svg>
+</div>
+</div>
+<div class="c-overlap__inner">
+<div class="c-overlap--stats__title">
+<h2 class="e-t3">Striking accuracy</h2>
+</div>
+<div class="c-overlap__stats-wrap">
+<dl class="c-overlap__stats">
+<dt class="c-overlap__stats-text">Sig. Strikes Landed</dt>
+<dd class="c-overlap__stats-value">230</dd>
+</dl>
+<dl class="c-overlap__stats">
+<dt class="c-overlap__stats-text">Sig. Strikes Attempted</dt>
+<dd class="c-overlap__stats-value">414</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--two-column">
+<div class="stats-records-inner">
+<div class="tooltip">
+<button aria-describedby="tooltip-1266207924" class="tooltip__button" type="button">
+<svg aria-hidden="true" fill="none" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 7h2V5H9v2Zm1 11c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM9 15h2V9H9v6Z" fill="#D20A0A"></path></svg>
+</button>
+<div class="tooltip__content-wrap tooltip__content-wrap--top-right" id="tooltip-1266207924" role="tooltip"><div class="tooltip__content tooltip__content--top-right">A takedown is awarded when a fighter deliberately grapples an opponent to the ground and establishes an advantageous position for an appreciable amount of time.</div></div>
+</div>
+<div class="overlap-athlete-content overlap-athlete-content--horizontal">
+<div class="c-overlap__chart">
+<div class="e-chart-circle__wrapper">
+<svg class="e-chart-circle" height="200" viewbox="-14 -14 128 128" width="200" xmlns="http://www.w3.org/2000/svg">
+<title>Takedown Accuracy 100%</title>
+<circle class="e-chart-circle--athlete-stat__background" cx="50" cy="50" fill="none" r="50" stroke="#fefefe" stroke-width="26"></circle>
+<circle class="e-chart-circle__circle" cx="50" cy="50" fill="none" r="50" stroke="#d20a0a" stroke-dasharray="314.2, 314.2" stroke-dashoffset="0" stroke-width="26" transform="rotate(-90 50 50)"></circle>
+<text class="e-chart-circle__percent" font-size="30" text-anchor="middle" x="50" y="60">100%</text>
+</svg>
+</div>
+</div>
+<div class="c-overlap__inner">
+<div class="c-overlap--stats__title">
+<h2 class="e-t3">Takedown Accuracy</h2>
+</div>
+<div class="c-overlap__stats-wrap">
+<dl class="c-overlap__stats">
+<dt class="c-overlap__stats-text">Takedowns Landed</dt>
+<dd class="c-overlap__stats-value">1</dd>
+</dl>
+<dl class="c-overlap__stats">
+<dt class="c-overlap__stats-text">Takedowns Attempted</dt>
+<dd class="c-overlap__stats-value">1</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--two-column">
+<div class="stats-records--compare stats-records-inner">
+<div class="c-stat-compare c-stat-compare--no-bar">
+<div class="c-stat-compare__group c-stat-compare__group-1">
+<div class="c-stat-compare__number">5.77
+              </div>
+<div class="c-stat-compare__label">Sig. Str. Landed</div>
+<div class="c-stat-compare__label-suffix">Per Min</div>
+</div>
+<div class="c-stat-compare__group c-stat-compare__group-2">
+<div class="c-stat-compare__number">5.40
+          </div>
+<div class="c-stat-compare__label">Sig. Str. Absorbed</div>
+<div class="c-stat-compare__label-suffix">Per Min</div>
+</div>
+</div>
+<div class="c-stat-compare c-stat-compare--no-bar">
+<div class="c-stat-compare__group c-stat-compare__group-1">
+<div class="c-stat-compare__number">0.38
+              </div>
+<div class="c-stat-compare__label">Takedown avg</div>
+<div class="c-stat-compare__label-suffix">Per 15 Min</div>
+</div>
+<div class="c-stat-compare__group c-stat-compare__group-2">
+<div class="c-stat-compare__number">0.38
+          </div>
+<div class="c-stat-compare__label">Submission avg</div>
+<div class="c-stat-compare__label-suffix">Per 15 Min</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--two-column">
+<div class="stats-records--compare stats-records-inner">
+<div class="tooltip">
+<button aria-describedby="tooltip-1843869019" class="tooltip__button" type="button">
+<svg aria-hidden="true" fill="none" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9 7h2V5H9v2Zm1 11c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8Zm0-18a10 10 0 1 0 0 20 10 10 0 0 0 0-20ZM9 15h2V9H9v6Z" fill="#D20A0A"></path></svg>
+</button>
+<div class="tooltip__content-wrap tooltip__content-wrap--top-right" id="tooltip-1843869019" role="tooltip"><div class="tooltip__content tooltip__content--top-right"> <ul>
+<li>Sig. Str. Defense is the percentage of significant strikes attempted against a fighter that do not land.</li>
+<li>Takedown defense is the percentage of takedowns attempted against a fighter that do not land.</li>
+<li>Knockdown Avg. is the average number of knockdowns per 15 Minutes window.</li>
+</ul>
+</div></div>
+</div>
+<div class="c-stat-compare c-stat-compare--no-bar">
+<div class="c-stat-compare__group c-stat-compare__group-1">
+<div class="c-stat-compare__number">40
+                  <div class="c-stat-compare__percent">%</div></div>
+<div class="c-stat-compare__label">Sig. Str. Defense</div>
+</div>
+<div class="c-stat-compare__group c-stat-compare__group-2">
+<div class="c-stat-compare__number">68
+                      <div class="c-stat-compare__percent">%</div></div>
+<div class="c-stat-compare__label">Takedown Defense</div>
+</div>
+</div>
+<div class="c-stat-compare c-stat-compare--no-bar">
+<div class="c-stat-compare__group c-stat-compare__group-1">
+<div class="c-stat-compare__number">0.75
+              </div>
+<div class="c-stat-compare__label">Knockdown Avg</div>
+</div>
+<div class="c-stat-compare__group c-stat-compare__group-2">
+<div class="c-stat-compare__number">13:17
+          </div>
+<div class="c-stat-compare__label">Average fight time</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--three-column">
+<div class="stats-records-inner">
+<div class="c-stat-3bar c-stat-3bar--no-chart">
+<h2 class="c-stat-3bar__title">Sig. Str. By Position</h2>
+<div class="c-stat-3bar__legend">
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">Standing </div>
+<div class="c-stat-3bar__value">179 (78%)</div>
+</div>
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">Clinch </div>
+<div class="c-stat-3bar__value">9 (4%) </div>
+</div>
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">Ground </div>
+<div class="c-stat-3bar__value">42 (18%)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--three-column">
+<div class="stats-records-inner">
+<div class="c-stat-body">
+<div class="c-stat-body__title">
+<h2 class="e-t5">Sig. Str. by target</h2>
+</div>
+<div class="c-stat-body__diagram">
+<svg class="c-stat-body__svg" height="208px" id="Layer_1" version="1.1" viewbox="0 0 268 208" width="268px" x="0px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g id="e-stat-body_x5F__x5F_bg">
+<line fill="none" id="line_2_" stroke="#EAEAEA" stroke-linecap="square" stroke-miterlimit="10" x1="0.5" x2="266.14" y1="39.5" y2="39.5"></line>
+<line fill="none" id="line_1_" stroke="#EAEAEA" stroke-linecap="square" stroke-miterlimit="10" x1="0.5" x2="266.14" y1="98.5" y2="98.5"></line>
+<line fill="none" id="line" stroke="#EAEAEA" stroke-linecap="square" stroke-miterlimit="10" x1="0.5" x2="266.14" y1="152.5" y2="152.5"></line>
+</g>
+<g id="e-stat-body_x5F__x5F_head-txt">
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_head_percent" transform="matrix(1 0 0 1 230.8119 32)">85%</text>
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_head_value" transform="matrix(1 0 0 1 197.8119 32)">196</text>
+<text fill="#1C1C1C" font-size="16px" font-weight="600" transform="matrix(1 0 0 1 3.8119 33)">Head</text>
+</g>
+<g id="e-stat-body_x5F__x5F_body-txt">
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_body_percent" transform="matrix(1 0 0 1 226.8119 90)">13%</text>
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_body_value" transform="matrix(1 0 0 1 197.8119 90)">31 </text>
+<text fill="#1C1C1C" font-size="16px" font-weight="600" transform="matrix(1 0 0 1 4.8119 91)">Body</text>
+</g>
+<g id="e-stat-body_x5F__x5F_leg-txt">
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_leg_percent" transform="matrix(1 0 0 1 226.8119 145)">1%</text>
+<text fill="#D20A0A" font-size="14px" id="e-stat-body_x5F__x5F_leg_value" transform="matrix(1 0 0 1 197.8119 145)">3</text>
+<text fill="#1C1C1C" font-size="16px" font-weight="600" transform="matrix(1 0 0 1 8.8119 146)">Leg</text>
+</g>
+<g id="e-stat-body_x5F__x5F_outline">
+<g>
+<path d="M126.91,13.33
+					c3.46,0.87,6.43,3.7,6.92,7.32c0.19,1.43,0.17,2.84,0.8,4.29c0.6,1.39,0.08,3.35-1.19,4.47c-2.01,1.78-1.83,4.14-2.2,6.36
+					c-0.12,0.71,0.34,1.52,1.01,2.04c3.13,2.43,6.31,4.91,10.19,5.94c3.41,0.9,5.51,2.66,6.33,5.96c0.25,0.99,0.45,1.98,0.56,3
+					c0.3,2.86,0.38,5.74,0.89,8.59c1.12,6.21,3,12.23,4.53,18.33c1.92,7.64,1.97,15.46,1.9,23.28c-0.03,2.69,0.23,5.33,1.16,7.89v1.44
+					c-0.69,2.39-1.75,4.49-4.47,5.25c-1.14,0.32-2.23,0.25-3.08-0.63c-0.8-0.83-0.88-1.81-0.37-2.83c0.16-0.32,0.27-0.67,0.31-1.03
+					c0.44-3.48,0.36-7.01,1.13-10.46c0.33-1.48-0.13-2.99-0.82-4.36c-3.42-6.77-4.99-14.01-5.81-21.45c-0.26-2.37-1.23-4.5-2.37-6.96
+					c-0.55,1.8-0.8,3.22-1.21,4.6c-1.24,4.2-1.49,8.43-1.09,12.81c0.3,3.35,1.06,6.63,1.22,9.98c-0.02,0.29-0.09,0.56-0.19,0.8
+					c0.41,1.47,0.65,2.98,0.87,4.48c0.21,0.99,0.43,1.99,0.64,2.98c0.25,1.55,0.5,3.11,0.75,4.66c0.02,0.24,0.04,0.47,0.06,0.71
+					c0.45,0.7,0.26,1.47,0.29,2.22c0.12,0.11,0.24,0.25,0.33,0.42c0.98,5.36,0.44,10.74,0.11,16.1c-0.24,3.95-0.9,7.86,0.83,11.66
+					c0.34,0.76,0.47,1.63,0.42,2.47c-0.16,2.3,0.62,4.33,1.67,6.35c1.28,2.47,2.26,5.05,2.4,7.87c-0.03,0.43-0.12,0.85-0.23,1.27
+					c0.27,1.81,0.22,3.62,0.01,5.43c0.06,0.52,0.1,1.05,0.14,1.57c0.3,2.67-0.41,5.24-0.85,7.83c-0.56,3.34-0.61,6.61-0.09,9.99
+					c0.34,2.19,0.78,3.89,2.71,5.27c1.31,0.94,0.86,2.28-0.71,2.88c-0.92,0.35-1.92,0.37-2.88,0.57c-1.26,0.25-2.58-0.34-3.78,0.33
+					h-1.11c-1.86-0.75-2.25-1.31-2.09-3.27c0.09-1.21,0.05-2.39-0.16-3.58c-0.19-1.07-0.31-2.2,0.12-3.2c0.92-2.17,0.6-4.36,0.29-6.55
+					c-0.28-1.96-0.75-3.89-1.2-5.82c-1.02-4.38-2.57-8.68-2.59-13.21c-0.01-3.52-1-6.76-2.41-9.9c-1.72-3.82-2.82-7.79-3.6-11.87
+					c-1-5.25-2.01-10.49-3.24-15.69c-0.58-2.44-1.46-4.84-1.48-7.39c0.01-0.13-0.45-0.51-0.99-0.91c-0.51,0.38-0.93,0.73-0.92,0.86
+					c-0.01,2.55-0.9,4.95-1.48,7.39c-1.23,5.2-2.24,10.45-3.24,15.69c-0.78,4.08-1.88,8.05-3.6,11.87c-1.41,3.14-2.4,6.37-2.41,9.9
+					c-0.02,4.53-1.57,8.84-2.59,13.21c-0.45,1.93-0.92,3.85-1.2,5.82c-0.31,2.2-0.63,4.38,0.29,6.55c0.43,1.01,0.31,2.14,0.12,3.2
+					c-0.21,1.19-0.25,2.38-0.16,3.58c0.15,1.95-0.24,2.51-2.09,3.27h-1.11c-1.2-0.67-2.52-0.08-3.78-0.33
+					c-0.96-0.19-1.96-0.21-2.88-0.57c-1.58-0.6-2.03-1.94-0.71-2.88c1.93-1.38,2.37-3.08,2.71-5.27c0.52-3.38,0.48-6.66-0.09-9.99
+					c-0.44-2.59-1.15-5.16-0.85-7.83c0.04-0.53,0.07-1.05,0.14-1.57c-0.21-1.81-0.26-3.62,0.01-5.43c-0.11-0.42-0.2-0.85-0.23-1.27
+					c0.14-2.81,1.13-5.4,2.4-7.86c1.04-2.02,1.83-4.05,1.67-6.35c-0.06-0.84,0.07-1.71,0.42-2.47c1.72-3.8,1.07-7.72,0.83-11.66
+					c-0.33-5.36-0.87-10.74,0.11-16.1c0.09-0.17,0.21-0.3,0.33-0.42c0.03-0.75-0.16-1.52,0.29-2.22c0.02-0.24,0.04-0.47,0.06-0.71
+					c0.25-1.55,0.5-3.11,0.75-4.66c0.21-0.99,0.43-1.99,0.64-2.98c0.23-1.51,0.47-3.01,0.87-4.48c-0.1-0.24-0.17-0.5-0.19-0.8
+					c0.16-3.35,0.92-6.63,1.22-9.98c0.4-4.38,0.15-8.61-1.09-12.81c-0.41-1.38-0.66-2.8-1.21-4.6c-1.14,2.46-2.1,4.59-2.37,6.96
+					c-0.82,7.43-2.39,14.68-5.81,21.45c-0.69,1.37-1.15,2.88-0.82,4.36c0.77,3.46,0.7,6.98,1.13,10.46c0.05,0.36,0.15,0.71,0.31,1.03
+					c0.51,1.03,0.43,2.01-0.37,2.83c-0.85,0.88-1.94,0.95-3.08,0.63c-2.72-0.75-3.78-2.85-4.47-5.25v-1.44
+					c0.92-2.55,1.18-5.19,1.16-7.89c-0.07-7.81-0.02-15.64,1.9-23.28c1.54-6.1,3.41-12.13,4.53-18.33c0.51-2.85,0.6-5.73,0.89-8.59
+					c0.11-1.02,0.31-2.01,0.56-3c0.82-3.3,2.91-5.06,6.33-5.96c3.88-1.03,7.07-3.51,10.19-5.94c0.67-0.52,1.13-1.33,1.01-2.04
+					c-0.36-2.21-0.18-4.58-2.2-6.36c-1.27-1.13-1.79-3.08-1.19-4.47c0.63-1.46,0.61-2.87,0.8-4.29c0.49-3.61,3.46-6.44,6.92-7.32
+					c0-0.11,0-0.17,0-0.17c0.4-0.05,0.8-0.06,1.2-0.05c0.66-0.08,1.32-0.08,1.99,0C126.91,13.06,126.91,13.15,126.91,13.33z" fill="#FAFAFA" stroke="#FAFAFA" stroke-miterlimit="10" stroke-width="6"></path>
+</g>
+</g>
+<path d="M134.63,24.95
+			c-0.63-1.46-0.61-2.87-0.8-4.29c-0.49-3.61-3.46-6.44-6.92-7.32c0-0.18,0-0.28,0-0.28c-0.66-0.08-1.33-0.07-1.99,0
+			c-0.4-0.01-0.8,0.01-1.2,0.05c0,0,0,0.06,0,0.17c-3.46,0.87-6.43,3.7-6.92,7.32c-0.19,1.43-0.17,2.84-0.8,4.29
+			c-0.6,1.39-0.08,3.35,1.19,4.47c2.01,1.78,1.83,4.14,2.2,6.36c0.12,0.71-0.34,1.52-1.01,2.04c-2.09,1.63-4.22,3.27-6.56,4.49h26.89
+			c-2.3-1.22-4.39-2.83-6.45-4.43c-0.67-0.52-1.13-1.33-1.01-2.04c0.36-2.21,0.18-4.58,2.2-6.36
+			C134.71,28.29,135.23,26.34,134.63,24.95z" fill="#D20A0A" id="e-stat-body_x5F__x5F_head" opacity="1"></path>
+<path d="M108.18,43.7
+			c-3.41,0.9-5.51,2.66-6.33,5.96c-0.25,0.99-0.45,1.98-0.56,3c-0.3,2.86-0.38,5.74-0.89,8.59c-1.12,6.21-3,12.23-4.53,18.33
+			c-1.92,7.64-1.97,15.46-1.9,23.28c0.03,2.69-0.23,5.33-1.16,7.89v1.44c0.69,2.39,1.75,4.49,4.47,5.25c1.14,0.32,2.23,0.25,3.08-0.63
+			c0.8-0.83,0.88-1.81,0.37-2.83c-0.16-0.32-0.27-0.67-0.31-1.03c-0.44-3.48-0.36-7.01-1.13-10.46c-0.33-1.48,0.13-2.99,0.82-4.36
+			c3.42-6.77,4.99-14.01,5.81-21.45c0.26-2.37,1.23-4.5,2.37-6.96c0.55,1.8,0.8,3.22,1.21,4.6c1.24,4.2,1.49,8.43,1.09,12.81
+			c-0.3,3.35-1.06,6.63-1.22,9.98c0.02,0.29,0.09,0.56,0.19,0.8c-0.41,1.47-0.65,2.98-0.87,4.48c-0.21,0.99-0.43,1.99-0.64,2.98
+			c-0.25,1.55-0.5,3.11-0.75,4.66c-0.02,0.24-0.04,0.47-0.06,0.71c-0.45,0.7-0.26,1.47-0.29,2.22c-0.12,0.11-0.24,0.25-0.33,0.42
+			c-0.39,2.13-0.53,4.25-0.55,6.38h16.84c0.58-2.4,1.44-4.77,1.45-7.29c-0.01-0.12,0.41-0.48,0.92-0.86c0.54,0.4,1.01,0.78,0.99,0.91
+			c0.01,2.5,0.86,4.85,1.44,7.24h16.86c-0.02-2.11-0.17-4.22-0.55-6.33c-0.09-0.17-0.21-0.3-0.33-0.42c-0.03-0.75,0.16-1.52-0.29-2.22
+			c-0.02-0.24-0.04-0.47-0.06-0.71c-0.25-1.55-0.5-3.11-0.75-4.66c-0.21-0.99-0.43-1.99-0.64-2.98c-0.23-1.51-0.47-3.01-0.87-4.48
+			c0.1-0.24,0.17-0.5,0.19-0.8c-0.16-3.35-0.92-6.63-1.22-9.98c-0.4-4.38-0.15-8.61,1.09-12.81c0.41-1.38,0.66-2.8,1.21-4.6
+			c1.14,2.46,2.1,4.59,2.37,6.96c0.82,7.43,2.39,14.68,5.81,21.45c0.69,1.37,1.15,2.88,0.82,4.36c-0.77,3.46-0.7,6.98-1.13,10.46
+			c-0.05,0.36-0.15,0.71-0.31,1.03c-0.51,1.03-0.43,2.01,0.37,2.83c0.85,0.88,1.94,0.95,3.08,0.63c2.72-0.75,3.78-2.85,4.47-5.25
+			v-1.44c-0.92-2.55-1.18-5.19-1.16-7.89c0.07-7.81,0.02-15.64-1.9-23.28c-1.54-6.1-3.41-12.13-4.53-18.33
+			c-0.51-2.85-0.6-5.73-0.89-8.59c-0.11-1.02-0.31-2.01-0.56-3c-0.82-3.3-2.91-5.06-6.33-5.96c-1.32-0.35-2.56-0.88-3.74-1.5h-26.89
+			C110.66,42.85,109.46,43.36,108.18,43.7z" fill="#D20A0A" id="e-stat-body_x5F__x5F_body" opacity="0.24234693877551"></path>
+<g id="e-stat-body_x5F__x5F_leg">
+<path d="M144.56,119.75H127.7c0.01,0.05,0.03,0.1,0.04,0.15
+				c1.23,5.2,2.24,10.45,3.24,15.69c0.78,4.08,1.88,8.05,3.6,11.87c1.41,3.14,2.4,6.37,2.41,9.9c0.02,4.53,1.57,8.84,2.59,13.21
+				c0.45,1.93,0.92,3.85,1.2,5.82c0.31,2.2,0.63,4.38-0.29,6.55c-0.43,1.01-0.31,2.14-0.12,3.2c0.21,1.19,0.25,2.38,0.16,3.58
+				c-0.15,1.95,0.24,2.51,2.09,3.27h1.11c1.2-0.67,2.52-0.08,3.78-0.33c0.96-0.19,1.96-0.21,2.88-0.57c1.58-0.6,2.03-1.94,0.71-2.88
+				c-1.93-1.38-2.37-3.08-2.71-5.27c-0.52-3.38-0.48-6.66,0.09-9.99c0.44-2.59,1.15-5.16,0.85-7.83c-0.04-0.53-0.07-1.05-0.14-1.57
+				c0.21-1.81,0.26-3.62-0.01-5.43c0.11-0.42,0.2-0.85,0.23-1.27c-0.14-2.81-1.13-5.4-2.4-7.86c-1.04-2.02-1.83-4.05-1.67-6.35
+				c0.06-0.84-0.07-1.71-0.42-2.47c-1.72-3.8-1.07-7.72-0.83-11.66C144.32,126.27,144.59,123.01,144.56,119.75z" fill="#D20A0A" opacity="0.11377551020408"></path>
+<path d="M100.23,192.05c0.92,0.35,1.92,0.37,2.88,0.57
+				c1.26,0.25,2.58-0.34,3.78,0.33H108c1.86-0.75,2.25-1.31,2.09-3.27c-0.09-1.21-0.05-2.39,0.16-3.58c0.19-1.07,0.31-2.2-0.12-3.2
+				c-0.92-2.17-0.6-4.36-0.29-6.55c0.28-1.96,0.75-3.89,1.2-5.82c1.02-4.38,2.57-8.68,2.59-13.21c0.01-3.52,1-6.76,2.41-9.9
+				c1.72-3.82,2.82-7.79,3.6-11.87c1-5.25,2.01-10.49,3.24-15.69c0.01-0.03,0.02-0.07,0.02-0.1h-16.84c-0.03,3.24,0.24,6.48,0.44,9.71
+				c0.24,3.95,0.9,7.86-0.83,11.66c-0.34,0.76-0.47,1.63-0.42,2.47c0.16,2.3-0.62,4.33-1.67,6.35c-1.28,2.47-2.26,5.05-2.4,7.87
+				c0.03,0.43,0.12,0.85,0.23,1.27c-0.27,1.81-0.22,3.62-0.01,5.43c-0.06,0.52-0.1,1.05-0.14,1.57c-0.3,2.67,0.41,5.24,0.85,7.83
+				c0.56,3.34,0.61,6.61,0.09,9.99c-0.34,2.19-0.78,3.89-2.71,5.27C98.2,190.12,98.65,191.45,100.23,192.05z" fill="#D20A0A" opacity="0.11377551020408"></path>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-records stats-records--three-column">
+<div class="stats-records-inner">
+<div class="c-stat-3bar c-stat-3bar--no-chart">
+<h2 class="c-stat-3bar__title">Win by Method</h2>
+<div class="c-stat-3bar__legend">
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">KO/TKO </div>
+<div class="c-stat-3bar__value">25 (86%)</div>
+</div>
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">DEC </div>
+<div class="c-stat-3bar__value">1 (3%) </div>
+</div>
+<div class="c-stat-3bar__group">
+<div class="c-stat-3bar__label">SUB </div>
+<div class="c-stat-3bar__value">3 (10%)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="athlete-record" id="athlete-record">
+<div class="l-container l-listing__title-wrap">
+<div class="l-container__content">
+<h2 class="l-listing__title">
+                athlete record
+              </h2>
+</div>
+</div>
+<div class="l-container">
+<div class="view view-eva view-athlete-results view-id-athlete_results view-display-id-entity_view_1 js-view-dom-id-2f1a58d7dd7a4adf37711851a259bc6d8b5765cc3dce0b1e8f23dad87015691d">
+<div class="l-container__content">
+<h3 class="athlete-records__title">Event Results</h3>
+</div>
+<div class="views-infinite-scroll-content-wrapper clearfix" data-drupal-views-infinite-scroll-content-wrapper="">
+<section class="l-listing--stacked">
+<ul class="l-listing__group"><li class="l-listing__item">
+<article class="c-card-event--athlete-results">
+<div class="c-card-event--athlete-results__fight-container">
+<div class="c-card-event--athlete-results__matchup-container">
+<div class="c-card-event--athlete-results__matchup-wrapper">
+<div class="c-card-event--athlete-results__matchup">
+<div class="c-card-event--athlete-results__red-image">
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2021-10/68036%252Fprofile-galery%252Fprofile-picture%252FTEIXEIRA_GLOVER_10-30.png?itok=WwIKiBxk" width="256"/>
+</article>
+</div>
+<div class="c-card-event--athlete-results__blue-image">
+<div class="c-card-event--athlete-results__plaque win">
+                                      Win
+                                  </div>
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png?itok=v6TIGC9I" width="256"/>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__info">
+<h3 class="c-card-event--athlete-results__headline">Teixeira vs Prochazka</h3>
+<div class="c-card-event--athlete-results__date"><time class="datetime" datetime="2022-06-11T22:00:00Z">Jun. 11, 2022</time>
+</div>
+<div class="c-card-event--athlete-results__results">
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Round</div>
+<div class="c-card-event--athlete-results__result-text">5</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Time</div>
+<div class="c-card-event--athlete-results__result-text">4:32</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Method</div>
+<div class="c-card-event--athlete-results__result-text">Submission</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__actions">
+<a class="e-button--arrow-right" href="//ufcfightpass.com" target="1"><span class="e-button__text">
+    
+    Watch Replay
+  </span></a>
+<a class="e-button--arrow-right" href="/event/ufc-275#9768"><span class="e-button__text">
+    
+    Recap
+  </span></a>
+</div>
+</article>
+</li><li class="l-listing__item">
+<article class="c-card-event--athlete-results">
+<div class="c-card-event--athlete-results__fight-container">
+<div class="c-card-event--athlete-results__matchup-container">
+<div class="c-card-event--athlete-results__matchup-wrapper">
+<div class="c-card-event--athlete-results__matchup">
+<div class="c-card-event--athlete-results__red-image">
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2021-04/67840%252Fprofile-galery%252Fprofile-picture%252FREYES_DOMINICK_05-01.png?VersionId=null&amp;itok=Va3IznTy" width="256"/>
+</article>
+</div>
+<div class="c-card-event--athlete-results__blue-image">
+<div class="c-card-event--athlete-results__plaque win">
+                                      Win
+                                  </div>
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png?itok=v6TIGC9I" width="256"/>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__info">
+<h3 class="c-card-event--athlete-results__headline">Reyes vs Prochazka</h3>
+<div class="c-card-event--athlete-results__date"><time class="datetime" datetime="2021-05-02T02:00:00Z">May. 1, 2021</time>
+</div>
+<div class="c-card-event--athlete-results__results">
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Round</div>
+<div class="c-card-event--athlete-results__result-text">2</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Time</div>
+<div class="c-card-event--athlete-results__result-text">4:29</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Method</div>
+<div class="c-card-event--athlete-results__result-text">KO/TKO</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__actions">
+<a class="e-button--arrow-right" href="//ufcfightpass.com" target="1"><span class="e-button__text">
+    
+    Watch Replay
+  </span></a>
+<a class="e-button--arrow-right" href="/event/ufc-fight-night-may-01-2021#9077"><span class="e-button__text">
+    
+    Recap
+  </span></a>
+</div>
+</article>
+</li><li class="l-listing__item">
+<article class="c-card-event--athlete-results">
+<div class="c-card-event--athlete-results__fight-container">
+<div class="c-card-event--athlete-results__matchup-container">
+<div class="c-card-event--athlete-results__matchup-wrapper">
+<div class="c-card-event--athlete-results__matchup">
+<div class="c-card-event--athlete-results__red-image">
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-07/OEZDEMIR_VOLKAN_07-23.png?itok=91AX24L-" width="256"/>
+</article>
+</div>
+<div class="c-card-event--athlete-results__blue-image">
+<div class="c-card-event--athlete-results__plaque win">
+                                      Win
+                                  </div>
+<article class="media media--type-image media--view-mode-event-results-athlete-headshot">
+<img class="image-style-event-results-athlete-headshot" height="160" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2022-06/5f9568f3-73b2-4f42-ab67-c72743e36729%252FPROCHAZKA_JIRI_BELTCOMP.png?itok=v6TIGC9I" width="256"/>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__info">
+<h3 class="c-card-event--athlete-results__headline">Oezdemir vs Prochazka</h3>
+<div class="c-card-event--athlete-results__date"><time class="datetime" datetime="2020-07-12T02:00:00Z">Jul. 11, 2020</time>
+</div>
+<div class="c-card-event--athlete-results__results">
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Round</div>
+<div class="c-card-event--athlete-results__result-text">2</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Time</div>
+<div class="c-card-event--athlete-results__result-text">0:49</div>
+</div>
+<div class="c-card-event--athlete-results__result">
+<div class="c-card-event--athlete-results__result-label">Method</div>
+<div class="c-card-event--athlete-results__result-text">KO/TKO</div>
+</div>
+</div>
+</div>
+<div class="c-card-event--athlete-results__actions">
+<a class="e-button--arrow-right" href="//ufcfightpass.com" target="1"><span class="e-button__text">
+    
+    Watch Replay
+  </span></a>
+<a class="e-button--arrow-right" href="/event/ufc-251#8517"><span class="e-button__text">
+    
+    Recap
+  </span></a>
+</div>
+</article>
+</li></ul></section>
+</div>
+</div>
+</div>
+</div>
+<div class="l-container--ufc-black faq-athlete">
+<div class="l-container__content">
+<div class="faq-athlete__wrap">
+<div>
+<h2 class="athlete-title">Info</h2>
+<div class="faq-athlete__teaser">
+<div class="clearfix text-formatted field field--name-qna-teaser field--type-text-long field--label-hidden field__item"><p>Learn more about Jiří Procházka's UFC history, fighter facts, and Q&amp;A below.</p>
+</div>
+</div>
+<div class="faq-athlete__tabs">
+<section aria-multiselectable="false" class="c-tabs c-tabs--athlete">
+<ul class="c-tabs__nav c-tabs__nav--n-2" role="tablist">
+<li class="c-tabs__nav-item is-active" role="presentation">
+<button aria-controls="tab-panel-1" aria-posinset="1" aria-selected="1" aria-setsize="3" class="btn c-tabs__nav-btn" role="tab" tabindex="">
+          Bio
+        </button>
+</li>
+<li class="c-tabs__nav-item" role="presentation">
+<button aria-controls="tab-panel-2" aria-posinset="2" aria-selected="" aria-setsize="3" class="btn c-tabs__nav-btn" role="tab" tabindex="-1">
+          Q&amp;A
+        </button>
+</li>
+</ul>
+<div class="c-tabs__mobile-nav">
+<label for="tab-329043268">
+          Choose tab:
+        </label>
+<select class="c-tabs__select" id="tab-329043268">
+<option value="tab-label-1">Bio</option>
+<option value="tab-label-2">Q&amp;A</option>
+</select>
+</div>
+<div class="c-tabs__panes">
+<div aria-labelledby="tab-label-1" class="c-tabs__pane is-current" id="tab-panel-1" role="tabpanel" tabindex="-1">
+<div class="c-tabs__pane-body">
+<div class="c-bio c-bio--athlete">
+<div class="c-bio__content">
+<div class="c-bio__info">
+<div class="c-bio__info-details">
+<div class="c-bio__row--1col">
+<div class="c-bio__field">
+<div class="c-bio__label">Status</div>
+<div class="c-bio__text">Active</div>
+</div>
+</div>
+<div class="c-bio__row--1col">
+<div class="c-bio__field c-bio__field--border-bottom-small-screens">
+<div class="c-bio__label">Hometown</div>
+<div class="c-bio__text">Hostěradice, Czechia</div>
+</div>
+</div>
+<div class="c-bio__row--2col">
+<div class="c-bio__field c-bio__field--border-bottom-small-screens">
+<div class="c-bio__label">Trains at</div>
+<div class="c-bio__text">JETSAAM GYM</div>
+</div>
+<div class="c-bio__field c-bio__field--border-bottom-small-screens">
+<div class="c-bio__label">Fighting style</div>
+<div class="c-bio__text">Muay Thai</div>
+</div>
+</div>
+<div class="c-bio__row--3col">
+<div class="c-bio__field">
+<div class="c-bio__label">Age</div>
+<div class="c-bio__text">
+<div class="field field--name-age field--type-integer field--label-hidden field__item">29</div>
+</div>
+</div>
+<div class="c-bio__field">
+<div class="c-bio__label">Height</div>
+<div class="c-bio__text">75.00</div>
+</div>
+<div class="c-bio__field">
+<div class="c-bio__label">Weight</div>
+<div class="c-bio__text">205.00</div>
+</div>
+</div>
+<div class="c-bio__row--3col">
+<div class="c-bio__field">
+<div class="c-bio__label">Octagon Debut</div>
+<div class="c-bio__text">Jul. 11, 2020</div>
+</div>
+<div class="c-bio__field">
+<div class="c-bio__label">Reach</div>
+<div class="c-bio__text">80.00</div>
+</div>
+<div class="c-bio__field">
+<div class="c-bio__label">Leg reach</div>
+<div class="c-bio__text">45.00</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div aria-labelledby="tab-label-2" class="c-tabs__pane" id="tab-panel-2" role="tabpanel" tabindex="-1">
+<div class="c-tabs__pane-body">
+<div class="clearfix text-formatted field field--name-qna field--type-text-long field--label-hidden field__item"><p><strong>Fighter Facts</strong></p>
+<ul>
+<li>Pro since 2012<br/>
+	 </li>
+<li>25 wins by KO, three by submission (2 RNC, Triangle)<br/>
+	 </li>
+<li>23 first round finishes<br/>
+	 </li>
+<li>On 13-fight winning streak<br/>
+	 </li>
+<li>On 11-fight finish streak<br/>
+	 </li>
+<li>Last three pre-UFC wins were over CB Dollaway, Fabio Maldonado, King Mo Lawal<br/>
+	 </li>
+<li>Holds wins over Kazuyuki Fujita, Satoshi Ishii, Darko Stosic<br/>
+	 </li>
+<li>Also faced Abdul-Kerim Edilov and Bojan Velickovic</li>
+</ul>
+<p> </p>
+<p><strong>UFC History</strong></p>
+<p><strong>UFC 275</strong> (6/11/22) Prochazka submitted Glover Teixeira (rear-naked choke) at 4:32 of the fifth round, winning the UFC light heavyweight title<br/>
+<strong>UFC Fight Night</strong> (5/1/21) Prochazka knocked out Dominick Reyes at 4:29 of the second round<br/>
+<strong>UFC 251</strong> (7/11/20) Prochazka knocked out Volkan Oezdemir at :49 of the second round</p>
+<p> </p>
+<p><strong>Q&amp;A</strong></p>
+<p><strong>When and why did you start training for fighting?</strong> I started in January 2009 to direct my aggressive energy in something positive.<br/>
+<strong>What ranks and titles have you held?</strong> Amateur Muay Thai Czech National champion,<br/>
+2x GCF light heavyweight champion, 2x RIZIN FF light heavyweight champion<br/>
+<strong>Do you have any heroes?</strong> Scorpion, Liu Kang - Mortal Kombat<br/>
+<strong>What does it mean for you to fight in the UFC?</strong> It’s the league of the best fighters in the world and a chance to show my power at the highest level.<br/>
+<strong>Did you go to college and if so what degree did you earn?</strong> I study at college now. I am in my 2nd year of studies.<br/>
+<strong>What was your job before you started fighting?</strong> Security in disco club<br/>
+<strong>Favorite grappling technique:</strong> Guillotine choke<br/>
+<strong>Favorite Striking technique:</strong> Jumping knee</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-container--ufc-black">
+<div class="l-container__content">
+<div class="athlete-shop">
+<a class="c-card c-card--advance" href="https://ufcstore.com/collections/fighter-jiri-prochazka">
+<div class="c-card__media">
+<img alt="Jiri Prochazka of Czech Republic prepares to fight Glover Teixeira of Brazil in the UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" class="image-style-mat-590-x-380" height="380" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/mat_590_x_380/s3/2022-07/GettyImages-1402407494.jpg?h=aa8274eb&amp;itok=UMCT6_b0" width="590"/>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<div class="c-card__headline__image">
+<img src="/themes/custom/ufc/assets/img/ufc-store-logo.png"/>
+</div>
+<h3 class="e-t3">
+                                Shop the latest apparel from the official UFC store.          
+          </h3>
+</div>
+</div>
+</a>
+<a class="c-card c-card--advance" href="https://ufcfightpass.com/fighters/3438">
+<div class="c-card__media">
+<img alt="Jiri Prochazka of Czech Republic punches Glover Teixeira of Brazil in the UFC light heavyweight championship fight during the UFC 275 event at Singapore Indoor Stadium on June 12, 2022 in Singapore. (Photo by Jeff Bottari/Zuffa LLC)" class="image-style-mat-590-x-380" height="380" loading="lazy" src="https://dmxg5wxfqgb4u.cloudfront.net/styles/mat_590_x_380/s3/2022-07/GettyImages-1402408412.jpg?h=aa8274eb&amp;itok=o5ILuve1" width="590"/>
+</div>
+<div class="c-card__allinfo">
+<div class="c-card__headline">
+<div class="c-card__headline__image">
+<img src="/themes/custom/ufc/assets/img/ufc-fight-pass-logo.png"/>
+</div>
+<h3 class="e-t3">
+            Behind-the-scenes access &amp; Fan only fights every month.
+          </h3>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="l-page__footer">
+<footer class="c-site-footer" role="contentinfo">
+<div class="c-site-footer__main">
+<a class="c-site-footer__logo" href="/">
+<svg>
+<use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#ufc-logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</a>
+<div id="block-ufc-localization">
+<div class="ufc-block-localization__title e-t6">
+<div class="block-ufc-localization-title">UFC.COM - WORLD</div>
+<svg>
+<use xlink:href="/themes/custom/ufc/assets/svg/sprite-ui.svg#triangle-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+</svg>
+</div>
+<div aria-hidden="true" class="ufc-block-localization__links">
+<ul class="links"><li class="pt-br"><a href="https://www.ufc.com.br">Brazil</a></li><li class="zh-hans"><a href="http://ufc.cn">China</a></li><li class="fr"><a href="https://www.ufc.com/language/switch/fr">France</a></li><li class="ja"><a href="http://jp.ufc.com">Japan</a></li><li class="ko"><a href="https://kr.ufc.com">Korea</a></li><li class="es"><a href="https://www.ufcespanol.com">Latin America</a></li><li class="ru"><a href="https://ufc.ru">Russia</a></li><li class="es-us"><a href="https://us.ufcespanol.com">USA Espanol</a></li></ul>
+</div>
+</div>
+<nav aria-labelledby="block-footer-menu" class="c-menu-footer" id="block-footer" role="navigation">
+<h2 class="u-visually--hidden" id="block-footer-menu">Footer</h2>
+<ul class="c-menu-footer__menu--level-1">
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/7258" href="/about" target="_self">UFC</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/7260" href="/about/sport" target="_self">The Sport</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/7259" href="/about/community" target="_self">UFC Foundation</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://ufc.com/careers" target="_self">Careers</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="http://www.ufcstore.com/?ecid=PRF-SM-100419&amp;pa=ufc.com_footer-shop-link_03-06-13" target="_blank">Store</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" href="https://www.ufc.com/connect">Social Media</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://facebook.com/ufc">Facebook</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.instagram.com/ufc/">Instagram</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.tiktok.com/@ufc">TikTok</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.twitch.tv/ufc">Twitch</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://twitter.com/ufc">Twitter</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.youtube.com/ufc">YouTube</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/90551" href="/faq" target="_self">Help</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/90552" href="/faq-ufctv-ufcfightpass" target="_self">Fight Pass FAQ</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/90730" href="/devices" target="_self">Devices</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://access.ufc.com/media_users/sign_in" target="_self">Press Credentials</a>
+</li>
+</ul>
+</li>
+<li class="c-menu-footer__item--level-1">
+<a class="c-menu-footer__link--level-1" data-drupal-link-system-path="node/524" href="/terms" target="_self">Legal</a>
+<ul class="c-menu-footer__menu--level-2">
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/524" href="/terms" target="_self">Terms</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" data-drupal-link-system-path="node/525" href="/privacy-policy" target="_self">Privacy Policy</a>
+</li>
+<li class="c-menu-footer__item--level-2">
+<a class="c-menu-footer__link--level-2" href="https://www.networkadvertising.org/choices/   " target="_self">Ad Choices</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="c-site-footer__copyright">
+<div class="block block-ufc-configuration block-copyright-block" id="block-copyrightblock">
+  
+    
+      Copyright © 2001-2022 UFC All Rights Reserved
+  </div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</div>
+<script src="/sites/default/files/js/js_RysXvThwk4fxRUw4_L26vXoo0qD2r1lZKL5Bi8ITSlc.js"></script>
+<script async="" src="https://static.addtoany.com/menu/page.js"></script>
+<script src="/sites/default/files/js/js_9iAq255c5Rhxl96GV3KzZkZ98qrjZ8PN1n_azr5NcbY.js"></script>
+<script src="//unpkg.com/aos@next/dist/aos.js"></script>
+<script src="/sites/default/files/js/js_T3stddKlofpvAwozY2KhPXV23XK-kkEYv9sXfOkvab4.js"></script>
+<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+<script src="//www.youtube.com/iframe_api"></script>
+<script src="/sites/default/files/js/js_jbPDwZDTBY1ApzFPS8L9QT1WjNimVCs9gL_jGB2Ystk.js"></script>
+<script src="/modules/custom/ufc_overlay/ufc_overlay.js?v=9.3.3"></script>
+<script src="/sites/default/files/js/js_Zdss2-Bfu8uhOXMaIe6sFVnXoqSY21SJgUBhasT9HPk.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3cad7d7fc7","applicationID":"190390077","transactionName":"NgZVbUYDCEdSVEdeWA9MdExHFglZHFlcU1JbAkNRWAcSUQ==","queueTime":0,"applicationTime":239,"atts":"GkFCGw4ZGxgRVhENTBwe","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
