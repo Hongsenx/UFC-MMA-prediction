@@ -1,0 +1,19 @@
+TO DO
+
+
+-create a query that writes all previous fight in a specific format to a csv file (so it's easier to read)
+
+-to add to weekly update, add new fights to existing 
+
+-create another project to get upcoming fights and then generate predictions
+
+
+~~~~CONSISTENCY METRIC~~~~~~~~
+-power rating
+-consistency rating
+-finishing rate
+-grappler - non-grappler spectrum
+-striker - non-striker spectrum
+-
+
+

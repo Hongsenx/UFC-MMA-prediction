@@ -1,0 +1,72 @@
+2022-12-05 21:23:54,284 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-05 21:23:54,288 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-05 21:23:54,289 - INFO - ~~~ UPDATING PAST EVENTS BASIC DATA ~~~
+2022-12-05 21:23:57,565 - INFO - Events (basic info) updated. Num of new events saved: 0
+2022-12-05 21:23:57,568 - INFO - scraper date logs updated: update past events basic info to JSON
+2022-12-05 21:23:59,570 - INFO - ~~~ UPDATING EVENTS DATA ~~~
+2022-12-05 21:24:29,740 - INFO - Event saved in json: UFC Fight Night: Thompson vs. Holland
+2022-12-05 21:24:29,749 - INFO - number of events updated: 1
+2022-12-05 21:24:29,755 - INFO - scraper date logs updated: update past events to JSON
+2022-12-05 21:24:31,756 - INFO - ~~~ UPDATING ATHLETE PROFILES DATA ~~~
+2022-12-05 21:24:31,766 - INFO - No events to update (athletes)
+2022-12-05 21:24:31,772 - INFO - ~~~ UPDATING DATABASE ~~~
+2022-12-05 21:24:37,020 - INFO - Event: UFC Fight Night: Thompson vs. Holland - Update successful :>
+2022-12-05 21:24:37,020 - INFO - scraper date logs updated: update_database
+2022-12-05 21:24:37,020 - INFO - Number of events updated to database: 1
+2022-12-05 21:24:37,020 - INFO - ~~~ STATUS OF WEEKLY UPDATE ~~~
+2022-12-05 21:24:37,029 - INFO - Weekly update completed. No errors.
+2022-12-18 10:23:39,949 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:23:39,980 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:23:39,980 - INFO - ~~~ UPDATING PAST EVENTS BASIC DATA ~~~
+2022-12-18 10:23:40,927 - INFO - Events (basic info) updated. Num of new events saved: 2
+2022-12-18 10:23:40,943 - INFO - scraper date logs updated: update past events basic info to JSON
+2022-12-18 10:23:42,947 - INFO - ~~~ UPDATING EVENTS DATA ~~~
+2022-12-18 10:23:59,674 - INFO - Event saved in json: UFC Fight Night: Cannonier vs. Strickland
+2022-12-18 10:24:14,077 - INFO - Event saved in json: UFC 282: Blachowicz vs. Ankalaev
+2022-12-18 10:24:14,077 - INFO - number of events updated: 2
+2022-12-18 10:24:14,077 - INFO - scraper date logs updated: update past events to JSON
+2022-12-18 10:24:16,085 - INFO - ~~~ UPDATING ATHLETE PROFILES DATA ~~~
+2022-12-18 10:24:54,310 - INFO - fighters updated in json: 0) Jan Blachowicz 1) Magomed Ankalaev 2) Paddy Pimblett 3) Jared Gordon 4) Santiago Ponzinibbio 5) Alex Morono 6) Dricus Du Plessis 7) Darren Till 8) Ilia Topuria 9) Bryce Mitchell 10) Raul Rosas Jr. 11) Jay Perrin 12) Jairzinho Rozenstruik 13) Chris Daukaus 14) Edmen Shahbazyan 15) Dalcha Lungiambula 16) Chris Curtis 17) Joaquin Buckley 18) Billy Quarantillo 19) Alexander Hernandez 20) TJ Brown 21) Erik Silva 22) Cameron Saaiman 23) Steven Koslow 
+2022-12-18 10:24:54,310 - INFO - Updated 24 fighters for event: UFC 282: Blachowicz vs. Ankalaev into JSON
+2022-12-18 10:24:54,310 - INFO - scraper date logs updated: update fighters details to JSON
+2022-12-18 10:24:54,325 - INFO - ~~~ UPDATING DATABASE ~~~
+2022-12-18 10:24:58,488 - INFO - Event: UFC 282: Blachowicz vs. Ankalaev - Update successful :>
+2022-12-18 10:24:59,805 - ERROR - Error getting fighter profile from json (no fighter of name Alessandro Costa found in json file
+2022-12-18 10:24:59,805 - ERROR - error. Multiple fighters with same name and weightclass found in json file
+2022-12-18 10:24:59,805 - ERROR - Error at function 'check_insert_fighters_refs_judges'
+2022-12-18 10:24:59,805 - ERROR - Event: UFC Fight Night: Cannonier vs. Strickland - Update unsuccessful :<
+2022-12-18 10:24:59,805 - INFO - scraper date logs updated: update_database
+2022-12-18 10:24:59,805 - INFO - Number of events updated to database: 1
+2022-12-18 10:24:59,821 - INFO - ~~~ STATUS OF WEEKLY UPDATE ~~~
+2022-12-18 10:24:59,821 - INFO - Weekly update completed. No errors.
+2022-12-18 10:29:17,419 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:29:17,420 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:29:17,420 - INFO - ~~~ UPDATING PAST EVENTS BASIC DATA ~~~
+2022-12-18 10:29:20,587 - INFO - Events (basic info) updated. Num of new events saved: 0
+2022-12-18 10:29:20,589 - INFO - scraper date logs updated: update past events basic info to JSON
+2022-12-18 10:29:22,602 - INFO - ~~~ UPDATING EVENTS DATA ~~~
+2022-12-18 10:29:22,602 - INFO - No events to update (events)
+2022-12-18 10:29:24,602 - INFO - ~~~ UPDATING ATHLETE PROFILES DATA ~~~
+2022-12-18 10:29:56,064 - ERROR - Problem with function 'get_full_fighters_details_from_1_event(self, event)' for UFC Fight Night: Cannonier vs. Strickland
+2022-12-18 10:29:56,064 - ERROR - failed to athlete data
+2022-12-18 10:29:56,065 - INFO - ~~~ UPDATING DATABASE ~~~
+2022-12-18 10:29:56,065 - INFO - database not updated
+2022-12-18 10:29:56,065 - INFO - ~~~ STATUS OF WEEKLY UPDATE ~~~
+2022-12-18 10:29:56,065 - INFO - Weekly update NOT completed. Num of errors: 1
+2022-12-18 10:30:49,505 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:30:49,505 - INFO - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2022-12-18 10:30:49,505 - INFO - ~~~ UPDATING PAST EVENTS BASIC DATA ~~~
+2022-12-18 10:30:50,239 - INFO - Events (basic info) updated. Num of new events saved: 0
+2022-12-18 10:30:50,239 - INFO - scraper date logs updated: update past events basic info to JSON
+2022-12-18 10:30:52,240 - INFO - ~~~ UPDATING EVENTS DATA ~~~
+2022-12-18 10:30:52,243 - INFO - No events to update (events)
+2022-12-18 10:30:54,248 - INFO - ~~~ UPDATING ATHLETE PROFILES DATA ~~~
+2022-12-18 10:31:32,389 - INFO - fighters updated in json: 0) Jared Cannonier 1) Sean Strickland 2) Arman Tsarukyan 3) Damir Ismagulov 4) Amir Albazi 5) Alessandro Costa 6) Alex Caceres 7) Julian Erosa 8) Drew Dober 9) Bobby Green 10) Michal Oleksiejczuk 11) Cody Brundage 12) Cory McKenna 13) Cheyanne Vlismas 14) Matthew Semelsberger 15) Jake Matthews 16) Said Nurmagomedov 17) Saidyokub Kakhramonov 18) Rafa Garcia 19) Maheshate 20) Rinat Fakhretdinov 21) Bryan Battle 22) Manel Kape 23) David Dvorak 24) Sergey Morozov 25) Journey Newson 
+2022-12-18 10:31:32,390 - INFO - Updated 26 fighters for event: UFC Fight Night: Cannonier vs. Strickland into JSON
+2022-12-18 10:31:32,392 - INFO - scraper date logs updated: update fighters details to JSON
+2022-12-18 10:31:32,393 - INFO - ~~~ UPDATING DATABASE ~~~
+2022-12-18 10:31:36,210 - INFO - Event: UFC Fight Night: Cannonier vs. Strickland - Update successful :>
+2022-12-18 10:31:36,213 - INFO - scraper date logs updated: update_database
+2022-12-18 10:31:36,214 - INFO - Number of events updated to database: 1
+2022-12-18 10:31:36,216 - INFO - ~~~ STATUS OF WEEKLY UPDATE ~~~
+2022-12-18 10:31:36,216 - INFO - Weekly update completed. No errors.
